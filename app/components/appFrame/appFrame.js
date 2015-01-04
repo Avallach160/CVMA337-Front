@@ -20,19 +20,22 @@
           href: '/'
         },{
           title: 'Mission Statement',
-          href: '/'
+          href: '/mission'
         },{
           title: 'Chain of Command',
-          href: '/'
+          href: '/coc'
         },{
           title: 'Calendar',
-          href: '/'
+          href: '/calendar'
         },{
           title: 'Photos',
-          href: '/'
+          href: '/photos'
         },{
           title: 'Contact Us',
-          href: '/'
+          href: '/contact'
+        },{
+          title: 'CVMA National Site',
+          href: 'www.combatvet.org'
         }]
       }
     };

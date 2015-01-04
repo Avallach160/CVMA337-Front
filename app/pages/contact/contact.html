@@ -1,0 +1,10 @@
+<h3 class="center underline">Contact Us</h3>
+<form novalidate name="contactForm">
+	<input type="text" class="form-control" placeholder="Name" name="name" data-ng-model="vm.message.name">
+	<input type="text" class="form-control" placeholder="Email" name="email" data-ng-model="vm.message.email">
+	<input type="text" class="form-control" placeholder="Phone Number" name="phone" data-ng-model="vm.message.phone">
+	<input type="text" class="form-control" placeholder="Type of Motorcycle & Size" name="bike" data-ng-model="vm.message.bike">
+	<input type="text" class="form-control" placeholder="Subject" name="subject" data-ng-model="vm.message.subject">
+	<input type="text" class="form-control" placeholder="Message" name="message" data-ng-model="vm.message.body">
+	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()">Send</button>
+</form>
