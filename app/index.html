@@ -14,32 +14,34 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="cvma337FrontApp">
+  <body ng-app="cvma">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">cvma337Front</h3>
-      </div>
+    <app-frame>
+      <div class="container">
+        <div class="header">
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><a ng-href="#">Home</a></li>
+            <li><a ng-href="#/about">About</a></li>
+            <li><a ng-href="#">Contact</a></li>
+          </ul>
+          <h3 class="text-muted">cvma337Front</h3>
+        </div>
 
-      <div ng-view=""></div>
+        <div ng-view=""></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <div class="footer">
+          <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
       </div>
-    </div>
+    </app-frame>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+    <!-- <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -47,7 +49,7 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-    </script>
+    </script> -->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -56,15 +58,27 @@
     <![endif]-->
     <!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="app.js"></script>
+        <script src="components/appFrame/appFrame.module.js"></script>
+        <script src="components/appFrame/appFrameDirective.js"></script>
+        <script src="components/appFrame/appFrame.js"></script>
+        <script src="pages/main/main.module.js"></script>
+        <script src="pages/main/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

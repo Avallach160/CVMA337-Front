@@ -1,0 +1,529 @@
+$navWidth: 250px;
+ 
+$semiTransparentIntelBlue: rgba(0, 106, 187, .95);
+ 
+html, body {
+    height:100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+ 
+button, a {
+    -webkit-user-select:none;
+}
+ 
+header button {
+    width:auto;
+}
+ 
+nav#siteNav {
+    background-color:transparent;
+    position:fixed;
+    top:9px;
+    right:0px;
+    height:44px;
+    width:650px;
+    // clip: rect(0,500px,44px,-80px);
+
+    &>ul {
+        margin:0px;
+        margin-right:65px;
+        height:100%;
+        padding:0px 0px 0px 20px;
+        text-align:right;
+
+        li {
+            display: inline-block;
+            height:100%;
+            list-style-type: none;
+            position: relative;
+            text-align:left;
+
+            a, a:visited {
+                padding:12px 1em 12px 1em;
+
+                &, a:hover {
+                    display:block;
+                    width:100%;
+                    height:100%;
+
+                    color:white;
+                    text-decoration: none;
+                    span {
+                        position: relative;
+                        top:2px;
+                        left:0.4em;
+
+                        &:before {
+                            display: inline-block;
+                            @include transition(all 0.1s linear);
+                            }
+                        }
+                    }
+                }
+ 
+                &.active {
+                    background-color:$mediumBlue;
+                }
+                &:hover {
+                    background-color:lighten($mediumBlue, 5%);
+                }
+ 
+                        ul {
+                                opacity:0;
+                                visibility: hidden;
+                                width:250px;
+                                position: absolute;
+                                top:52px;
+                                right:0px;
+                                margin:0px;
+                                padding:0px;
+                                background-color:$darkGray;
+ 
+                                @include transition(all ease .1s);
+ 
+                                li {
+                                        display: block;
+                                        padding:0px;
+ 
+                                        a {
+                                                display:block;
+                                                width:100%;
+                                                padding:0.5em 1em;
+                                        }
+                                }
+                        }
+                        &.open ul {
+                                opacity:1;
+                                visibility: visible;
+ 
+                                body.semiStyle & {
+                                        opacity:0.9;
+                                }
+                        }
+ 
+                        &.open a span:before {
+                                @include rotate(-180deg);
+                                // content: "\e060"; /* .icon-a_up */
+                        }
+                }
+        }
+ 
+        body.itdz & {
+                top:50px;
+                height:44px;
+                width:100%;
+                background-color:$gray1;
+                color:$darkGray;
+                border-bottom:solid 1px $gray2;
+ 
+                a, a:visited, a:hover {
+                        color:$intelBlue;
+                }
+ 
+                >ul {
+                        text-align:left;
+                        padding-left:1em;
+                        >li {
+                                top:0px;
+ 
+                                &.active {
+                                        background-color: darken($gray1, 10%);
+                                }
+                                &:hover {
+                                        background-color: darken($gray1, 5%);
+                                }
+                        }
+ 
+                        ul {
+                                background-color:$gray1;
+                                top:43px;
+                                left:0px;
+                                right:auto;
+                                border:1px solid $gray2;
+                                border-bottom: none;
+ 
+                                li {
+                                        &.active {
+                                                background-color: darken($gray1, 10%);
+                                        }
+                                        &:hover {
+                                                background-color: darken($gray1, 5%);
+                                        }
+                                }
+                        }
+                }
+        }
+ 
+        body.kinked & {
+                top:18px;
+                background-color:white;
+ 
+                >ul {
+                        text-align: left;
+ 
+                        &:before {
+                                content: ' ';
+                                display:block;
+                                position:absolute;
+                                top:-7px;
+                                left:-71px;
+                                @include rotate(15deg);
+                                width: 0;
+                                height: 0;
+                                border-left: 64px solid transparent;
+                                border-right: 17px solid transparent;
+                                border-bottom: 62px solid white;
+                        }
+ 
+                        >li {
+                                &.active {
+                                        background-color:white;
+                                        border-bottom:4px solid $gray3;
+                                }
+                                &:hover {
+                                        background-color:$gray2;
+                                }
+                        }
+ 
+                        ul {
+                                top:43px;
+                                background-color:white;
+                                @include box-shadow(#666 0px 5px 20px);
+ 
+                                li {
+                                        &.active {
+                                                background-color:white;
+                                                border-left:10px solid $gray2;
+                                        }
+                                        &:hover {
+                                                background-color:$gray2;
+                                        }
+                                }
+ 
+                        }
+                }
+                a, a:visited, a:hover {
+                        color:$intelBlue;
+                }
+        }
+ 
+        #search {
+                position: absolute;
+                top:0px;
+                right:50px;
+                color:white;
+                border-left:solid 1px white;
+                background-color:$intelBlue;
+                @include transition(all ease .3s);
+                @include transform2d(translateX(100%));
+ 
+                body.itdz & {
+                        background-color:$gray1;
+                        border-color:$intelBlue;
+ 
+                        button span:before {
+                                color:$intelBlue;
+                        }
+                }
+ 
+                body.kinked & {
+                        top:5px;
+                }
+ 
+                form {
+                        display: inline-block;
+                        border:none;
+                        padding:0px;
+                        margin:0px;
+                        position: relative;
+                        top:-5px;
+                }
+                input {
+                        width:500px;
+                        margin-right:5px;
+                }
+ 
+                button {
+                        margin:0px;
+                        margin-top:5px;
+                        padding:4px 15px;
+                        border:none;
+                        min-width:0px;
+                        @include border-radius(0px);
+                        background-color: transparent;
+ 
+                        span {
+                                font-size:1.5em;
+                                margin:0px;
+                                line-height: 1.1;
+                        }
+                }
+ 
+                &.open {
+                        @include translateX(0);
+                        right:0px;
+                }
+        }
+        &.hideSearch #search {
+                display: none;
+        }
+}
+ 
+#page {
+        top:62px;
+        position:relative;
+        background-color:white;
+        z-index:1;
+ 
+        #page-shortTitle {
+                display: none;
+        }
+ 
+        &>div {
+                width:100%;
+                height:100%;
+                overflow:inherit;
+                -webkit-overflow-scrolling: touch;
+        }
+ 
+        body.itdz & {
+                top:114px;
+        }
+}
+ 
+header#pageHeader {
+        @include clearfix();
+ 
+        height:50px;
+        width:100%;
+        position:fixed;
+        top:0px;
+        z-index:100;
+ 
+        #navMenu {
+                display: none;
+        }
+        h1 {
+                float:left;
+                margin:8px 0.5em;
+                font-size: 2em;
+ 
+                a, a:visited, a:hover {
+                        color:white;
+                        text-decoration: none;
+                }
+        }
+        img {
+                float:right;
+                width:50px;
+                margin:8px;
+        }
+ 
+ 
+        body.itdz & {
+                img {
+                        float: right;
+                }
+        }
+}
+ 
+ 
+ 
+ 
+@media screen and (max-width: $screen-md) {
+        /* tablet styles here */
+ 
+        nav#siteNav {
+                position:absolute;
+                top:0px !important;
+                height:100%;
+                width:100%;
+                background-color:$darkGray !important;
+                border:none;
+                clip:auto;
+                overflow-x:hidden;
+                // border-right:5px solid darken($darkGray, 10%);
+                z-index:1;
+ 
+                &.hideSearch>ul {
+                        padding-top:0px;
+                }
+                &>ul {
+                        padding:0;
+                        padding-top:75px;
+ 
+                        li {
+                                height:auto;
+                                padding:0;
+                                display: block;
+                                width:100%;
+                                color:white;
+ 
+                                a, a:visited {
+                                        padding:0.25em 0 0.25em 1em;
+ 
+                                        &, a:hover {
+                                                display: block;
+                                                width:100%;
+                                                height:100%;
+                                                color:white !important;
+                                                text-decoration: none;
+                                        }
+                                }
+ 
+                                ul {
+                                        position: relative;
+                                        right:auto;
+                                        top:0px;
+                                        display: none;
+ 
+                                        body.kinked & {
+                                                background-color: $darkGray;
+                                                @include box-shadow(none);
+                                        }
+ 
+                                        li {
+                                                margin-left:1em;
+ 
+                                                &.active {
+                                                        border:none !important;
+                                                        background-color: lighten($darkGray, 10%) !important;
+                                                }
+                                        }
+                                }
+ 
+                                &.open ul {
+                                        display: block;
+                                }
+ 
+                                &.active {
+                                        border:none !important;
+                                        background-color: lighten($darkGray, 10%) !important;
+                                }
+                                &:hover {
+                                        background-color: darken($darkGray, 10%) !important;
+                                }
+                        }
+                }
+ 
+                body.kinked & {
+                        ul {
+                                ul {
+                                        top:0px;
+                                }
+                        }
+                }
+ 
+                body.itdz & {
+                        height:100%;
+ 
+                        ul {
+                                ul {
+                                        top:0px;
+                                        background-color: $darkGray;
+                                        border:none;
+                                }
+                        }
+                }
+ 
+ 
+                #search {
+                        top:5px;
+                        right:auto;
+                        border:none;
+ 
+                        button {
+                                display: none;
+                        }
+ 
+                        form {
+                                input {
+                                        position:absolute;
+                                        width:225px;
+                                        left:10px;
+                                        top:10px;
+                                }
+                        }
+                }
+        }
+ 
+        #page {
+                z-index:2;
+                top:0px;
+                width:100%;
+                height:100%;
+                overflow: auto;
+                background-color: white;
+                @include transition(all ease .25s);
+                @include box-shadow(#111111 0px 0px 15px);
+                padding-top:0px;
+ 
+                &>div {
+                        padding-top:50px;
+                }
+ 
+                &.showNav {
+                        @include transform(translate($navWidth) scale(0.75, 0.75));
+                }
+ 
+                body.mobile-nav-slide &.showNav {
+                        @include transform(translate($navWidth));
+                }
+ 
+                body.itdz & {
+                        top:0px;
+                }
+        }
+ 
+        header#pageHeader {
+                z-index:100;
+                top:0px;
+                height:50px;
+                min-height:0px;
+                overflow: visible;
+ 
+                #navMenu {
+                        display: block;
+                        float: left;
+                        min-width: 0px;
+                        padding:2px 6px 6px 6px;
+                        margin:7px;
+ 
+                        i {
+                                font-size:1.5em;
+                                position: relative;
+                                top:3px;
+                        }
+                }
+ 
+    ul {
+      li {
+        margin:5px;
+      }
+    }
+ 
+        }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+@media screen and (max-width: $screen-sm) {
+        /* smartphone styles here */
+ 
+        div#pageContent {
+                padding:1em;
+        }
+ 
+        #page {
+                #page-title {
+                        display: none;
+                }
+                #page-shortTitle {
+                        display: block;
+                }
+        }
+}
