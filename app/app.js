@@ -8,6 +8,7 @@
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'cvma.router',
     'cvma.main',
     'cvma.appFrame',
     'cvma.mission',
@@ -18,38 +19,11 @@
   ]);
 
   angular.module('cvma').config(routing);
-  function routing($routeProvider) {
+
+  /* @ngInject */
+  function routing($routeProvider, routehelperConfigProvider) {
+    routehelperConfigProvider.config.$routeProvider = $routeProvider;
     $routeProvider
-      .when('/', {
-        templateUrl: 'pages/main/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/mission', {
-        templateUrl: 'pages/mission/mission.html',
-        controller: 'MissionCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/coc', {
-        templateUrl: 'pages/chainOfCommand/chainOfCommand.html',
-        controller: 'ChainOfCommandCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/calendar', {
-        templateUrl: 'pages/calendar/calendar.html',
-        controller: 'CalendarCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/photos', {
-        templateUrl: 'pages/photos/photos.html',
-        controller: 'PhotosCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/contact', {
-        templateUrl: 'pages/contact/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'vm'
-      })
       .otherwise({
         redirectTo: '/'
       });

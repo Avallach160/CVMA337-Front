@@ -179,7 +179,7 @@ module.exports = function(grunt) {
                 generatedImagesDir: '.tmp/images/generated',
                 imagesDir: '<%= project.app %>/images',
                 fontsDir: '<%= project.app %>/styles/fonts',
-                importPath: '<%= project.app %>/bower_components',
+                // importPath: '<%= project.app %>/bower_components',
                 httpImagesPath: '<%= project.app %>/images',
                 httpGeneratedImagesPath: '<%= project.app %>/images/generated',
                 httpFontsPath: '<%= project.app %>/styles/fonts',
