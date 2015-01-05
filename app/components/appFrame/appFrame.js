@@ -17,25 +17,25 @@
       nav: {
         items: [{
           title: 'Home',
-          href: '/'
+          href: '/#/'
         },{
           title: 'Mission Statement',
-          href: '/mission'
+          href: '/#/mission'
         },{
           title: 'Chain of Command',
-          href: '/coc'
+          href: '/#/coc'
         },{
           title: 'Calendar',
-          href: '/calendar'
+          href: '/#/calendar'
         },{
           title: 'Photos',
-          href: '/photos'
+          href: '/#/photos'
         },{
           title: 'Contact Us',
-          href: '/contact'
+          href: '/#/contact'
         },{
           title: 'CVMA National Site',
-          href: 'www.combatvet.org'
+          href: 'http://www.combatvet.org'
         }]
       }
     };
