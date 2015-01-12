@@ -15,7 +15,10 @@
     'cvma.chainOfCommand',
     'cvma.calendar',
     'cvma.photos',
-    'cvma.contact'
+    'cvma.contact',
+    'intcConfigurator',
+    'cvma.login',
+    'LocalStorageModule'
   ]);
 
   angular.module('cvma').config(routing);

@@ -21,22 +21,7 @@
 
     <!-- Add your site or application content here -->
     <app-frame>
-      <div class="container">
-        <div class="header">
-          <ul class="nav nav-pills pull-right">
-            <li class="active"><a ng-href="#">Home</a></li>
-            <li><a ng-href="#/about">About</a></li>
-            <li><a ng-href="#">Contact</a></li>
-          </ul>
-          <h3 class="text-muted">cvma337Front</h3>
-        </div>
-
-        <div ng-view=""></div>
-
-        <div class="footer">
-          <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-        </div>
-      </div>
+      <div class="container" ng-view="">
     </app-frame>
 
 
@@ -69,16 +54,21 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app.js"></script>
+        
         <script src="components/appFrame/appFrame.module.js"></script>
         <script src="components/appFrame/appFrameDirective.js"></script>
         <script src="components/appFrame/appFrame.js"></script>
         <script src="components/router/router.module.js"></script>
         <script src="components/router/router.js"></script>
+        <script src="components/configurator/configurator.min.js"></script>
+        <script src="components/configurator/config.js"></script>
 
         <script src="pages/main/main.module.js"></script>
         <script src="pages/main/config.route.js"></script>
@@ -98,6 +88,13 @@
         <script src="pages/contact/contact.module.js"></script>
         <script src="pages/contact/config.route.js"></script>
         <script src="pages/contact/contact.js"></script>
+        <script src="pages/login/login.module.js"></script>
+        <script src="pages/login/config.route.js"></script>
+        <script src="pages/login/login.js"></script>
+        <script src="pages/login/register.js"></script>
+
+        <script src="services/user.js"></script>
+        <script src="services/webRequest.js"></script>
         <!-- endbuild -->
 </body>
 </html>

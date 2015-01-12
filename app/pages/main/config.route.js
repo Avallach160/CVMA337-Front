@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/main/main.html',
                     controller: 'MainCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 0,
+                    title: 'Home'
                 }
             }
         ];

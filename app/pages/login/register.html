@@ -1,0 +1,30 @@
+<h3>New Account Registration</h3>
+<form novalidate name='registrationForm'>
+	<label>Email Address:</label>
+	<input type='email' data-ng-model='vm.email' required name='email'>
+	<span data-ng-if='registrationForm.email.$invalid || registrationForm.$dirty'>Please enter a valid email address.</span>
+	<br>
+	<label>Password:</label>
+	<input type='password' data-ng-model='vm.password' required data-ng-minlength='8' name='password'>
+	<span data-ng-if='registrationForm.password.$error.minlength || registrationForm.$dirty'>Your password must be at least 8 characters long.</span>
+	<br>
+	<label>Confirm Password:</label>
+	<input type='password' data-ng-model='vm.passwordConfirmation' required>
+	<br>
+	<label>First Name: </label>
+	<input type='text' data-ng-model='vm.firstName'>
+	<br>
+	<label>Last Name:</label>
+	<input type='text' data-ng-model='vm.lastName'>
+	<br>
+	<label>Road Name:</label>
+	<input type='text' data-ng-model='vm.roadName'>
+	<br>
+	<label>Motorcycle:</label>
+	<input type='text' data-ng-model='vm.motorcycle'>
+	<br>
+	<label>Phone Number:</label>
+	<input type='text' data-ng-model='vm.phoneNumber'>
+	<br>
+	<button type='submit' class='btn btn-success' data-ng-click='vm.register()'>Submit</button>
+</form>

@@ -4,7 +4,7 @@
   angular.module('cvma.appFrame').controller('AppFrameCtrl', AppFrameCtrl);
  
   /* @ngInject */
-  function AppFrameCtrl() {
+  function AppFrameCtrl($route) {
     var vm = this;
 
     vm.intcAppFrame = {
@@ -15,35 +15,17 @@
       },
       mobileNavAnimation: 'slide',
       nav: {
-        items: [{
-          title: 'Home',
-          href: '/#/'
-        },{
-          title: 'Mission Statement',
-          href: '/#/mission'
-        },{
-          title: 'Chain of Command',
-          href: '/#/coc'
-        },{
-          title: 'Calendar',
-          href: '/#/calendar'
-        },{
-          title: 'Photos',
-          href: '/#/photos'
-        },{
-          title: 'Contact Us',
-          href: '/#/contact'
-        },{
-          title: 'CVMA National Site',
-          href: 'http://www.combatvet.org'
-        }]
+        items: []
       }
     };
 
     init();
 
     function init() {
-      
+      _.forEach(_.sortBy(_.where($route.routes, {showOnNav: true}), 'navPosition'), function(r){
+        vm.intcAppFrame.nav.items.push({title: r.title, href: '/#' + r.originalPath});
+      });
+      vm.intcAppFrame.nav.items.push({title: 'CVMA National Site', href: 'http://www.combatvet.org'});
     };
   };
 })();

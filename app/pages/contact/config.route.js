@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/contact/contact.html',
                     controller: 'ContactCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 5,
+                    title: 'Contact Us'
                 }
             }
         ];
