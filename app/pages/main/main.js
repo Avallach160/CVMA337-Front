@@ -6,13 +6,13 @@
         .controller('MainCtrl', MainCtrl);
 
     /* @ngInject */
-    function MainCtrl(UserService) {
+    function MainCtrl(UserService, localStorageService) {
         /*jshint validthis: true */
         var vm = this;
 
-        activate();
+        init();
 
-        function activate() {
+        function init() {
         	UserService.getAll().then(function(response){
                 vm.users = response;   
             }, function(errorResponse){

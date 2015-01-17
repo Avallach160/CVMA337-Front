@@ -18,17 +18,7 @@
     'cvma.contact',
     'intcConfigurator',
     'cvma.login',
-    'LocalStorageModule'
+    'autoFocus',
+    'cvma.config'
   ]);
-
-  angular.module('cvma').config(routing);
-
-  /* @ngInject */
-  function routing($routeProvider, routehelperConfigProvider) {
-    routehelperConfigProvider.config.$routeProvider = $routeProvider;
-    $routeProvider
-      .otherwise({
-        redirectTo: '/'
-      });
-  }
 })();
