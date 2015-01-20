@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/mission/mission.html',
                     controller: 'MissionCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 1,
+                    title: 'Mission Statement'
                 }
             }
         ];

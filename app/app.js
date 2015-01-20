@@ -15,17 +15,10 @@
     'cvma.chainOfCommand',
     'cvma.calendar',
     'cvma.photos',
-    'cvma.contact'
+    'cvma.contact',
+    'intcConfigurator',
+    'cvma.login',
+    'autoFocus',
+    'cvma.config'
   ]);
-
-  angular.module('cvma').config(routing);
-
-  /* @ngInject */
-  function routing($routeProvider, routehelperConfigProvider) {
-    routehelperConfigProvider.config.$routeProvider = $routeProvider;
-    $routeProvider
-      .otherwise({
-        redirectTo: '/'
-      });
-  }
 })();

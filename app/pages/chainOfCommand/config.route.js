@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/chainOfCommand/chainOfCommand.html',
                     controller: 'ChainOfCommandCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 2,
+                    title: 'Chain of Command'
                 }
             }
         ];

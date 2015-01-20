@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/photos/photos.html',
                     controller: 'PhotosCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 4,
+                    title: 'Photos'
                 }
             }
         ];

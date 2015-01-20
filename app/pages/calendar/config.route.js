@@ -19,7 +19,10 @@
                 config: {
                     templateUrl: 'pages/calendar/calendar.html',
                     controller: 'CalendarCtrl',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    showOnNav: true,
+                    navPosition: 3,
+                    title: 'Calendar'
                 }
             }
         ];
