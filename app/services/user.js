@@ -20,7 +20,16 @@
         };
 
         function login(email, password){
-            
+            var data = {
+                user: email,
+                password: password
+            };
+            return webRequest.request(intcConfigurator.config.serviceRoot + 'auth/authenticate', 'POST', data).then(function(response){
+                console.log(response);
+                // localStorageService.set(userKey, response.stringify())
+            }, function(errorResponse){
+                console.log(errorResponse);
+            });
         };
 
         function register(email, password, confirmPassword, fName, lName, rName, motorcycle, phone){

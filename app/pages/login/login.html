@@ -3,6 +3,10 @@
 	<input auto-focus type='email' data-ng-model='vm.username'>
 	<label>Password:</label>
 	<input type='password' data-ng-model='vm.password'>
+	<div>
+		<input type="checkbox" id="stay" data-ng-model="vm.staySignedIn"><label for="stay">Stay signed in?</label>
+		<button type="btn" class="btn btn-success" data-ng-click="vm.loginClick()">Log in</button>
+	</div>
 </div>
 <p>
 	Don't have an account? <a ng-href='/#/register'>Register here.</a>

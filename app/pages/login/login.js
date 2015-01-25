@@ -7,10 +7,15 @@
     function LoginCtrl() {
         /*jshint validthis: true */
         var vm = this;
+        vm.loginClick = loginClick;
 
         init();
 
         function init() {
         }
+
+        function loginClick(){
+            
+        };
     }
 })();
