@@ -5,9 +5,11 @@
 
     /* @ngInject */
     function UserService(intcConfigurator, webRequest, $q, localStorageService) {
+        var userKey = 'usersToken';
         var service = {
             getAll: getAll,
-            register: register
+            register: register,
+            login: login
         };
         return service;
 
@@ -15,6 +17,10 @@
 
         function getAll() {
         	return webRequest.request(intcConfigurator.config.serviceRoot + 'user');
+        };
+
+        function login(email, password){
+            
         };
 
         function register(email, password, confirmPassword, fName, lName, rName, motorcycle, phone){
@@ -30,7 +36,10 @@
                 phoneNumber: phone
             };
             webRequest.request(intcConfigurator.config.serviceRoot + 'auth/register', 'POST', user).then(function(response){
-                console.log(response);
+                //new user so clear the token
+                localStorageService.remove(userKey);
+                //store token
+                localStorageService.set(userKey, response.token);
                 d.resolve(response);
             }, function(errorResponse){
                 console.log(response);

@@ -13,6 +13,7 @@
         init();
 
         function init() {
+            console.log(localStorageService.get('usersToken'));
         	UserService.getAll().then(function(response){
                 vm.users = response;   
             }, function(errorResponse){

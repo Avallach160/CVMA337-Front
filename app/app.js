@@ -19,6 +19,7 @@
     'intcConfigurator',
     'cvma.login',
     'autoFocus',
-    'cvma.config'
+    'cvma.config',
+    'toaster'
   ]);
 })();
