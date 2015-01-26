@@ -22,7 +22,11 @@
 
     <!-- Add your site or application content here -->
     <app-frame>
+      <login></login>
+
       <div class="container" ng-view="">
+        
+      </div>
     </app-frame>
 
 
@@ -77,6 +81,8 @@
         <script src="components/router/router.js"></script>
         <script src="components/configurator/configurator.min.js"></script>
         <script src="components/configurator/config.js"></script>
+        <script src="components/login/login.module.js"></script>
+        <script src="components/login/loginDirective.js"></script>
 
         <script src="pages/main/main.module.js"></script>
         <script src="pages/main/config.route.js"></script>
@@ -96,10 +102,9 @@
         <script src="pages/contact/contact.module.js"></script>
         <script src="pages/contact/config.route.js"></script>
         <script src="pages/contact/contact.js"></script>
-        <script src="pages/login/login.module.js"></script>
-        <script src="pages/login/config.route.js"></script>
-        <script src="pages/login/login.js"></script>
-        <script src="pages/login/register.js"></script>
+        <script src="pages/register/register.module.js"></script>
+        <script src="pages/register/config.route.js"></script>
+        <script src="pages/register/register.js"></script>
 
         <script src="services/user.js"></script>
         <script src="services/webRequest.js"></script>

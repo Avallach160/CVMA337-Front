@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('cvma.login')
+        .module('cvma.register')
         .run(appRun);
 
     // appRun.$inject = ['routehelper']
@@ -15,20 +15,9 @@
     function getRoutes() {
         return [
             {
-                url: '/login',
-                config: {
-                    templateUrl: 'pages/login/login.html',
-                    controller: 'LoginCtrl',
-                    controllerAs: 'vm',
-                    showOnNav: true,
-                    navPosition: 6,
-                    title: 'Sign In'
-                }
-            },
-            {
                 url: '/register',
                 config: {
-                    templateUrl: 'pages/login/register.html',
+                    templateUrl: 'pages/register/register.html',
                     controller: 'RegisterCtrl',
                     controllerAs: 'vm',
                     showOnNav: false

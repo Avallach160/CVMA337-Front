@@ -4,12 +4,14 @@
     angular.module('cvma').factory('UserService', UserService);
 
     /* @ngInject */
-    function UserService(intcConfigurator, webRequest, $q, localStorageService) {
+    function UserService(intcConfigurator, webRequest, $q, localStorageService, toaster) {
         var userKey = 'usersToken';
         var service = {
             getAll: getAll,
             register: register,
-            login: login
+            login: login,
+            getCurrent: getCurrent,
+            forgetCurrent: forgetCurrent
         };
         return service;
 
@@ -19,16 +21,24 @@
         	return webRequest.request(intcConfigurator.config.serviceRoot + 'user');
         };
 
+        function getCurrent(){
+            return localStorageService.get(userKey);
+        };
+
+        function forgetCurrent(){
+            localStorageService.remove(userKey);
+        };
+
         function login(email, password){
             var data = {
-                user: email,
+                email: email,
                 password: password
             };
             return webRequest.request(intcConfigurator.config.serviceRoot + 'auth/authenticate', 'POST', data).then(function(response){
+                localStorageService.set(userKey, response);
                 console.log(response);
-                // localStorageService.set(userKey, response.stringify())
             }, function(errorResponse){
-                console.log(errorResponse);
+                toaster.pop('error', '', errorResponse);
             });
         };
 
@@ -48,7 +58,7 @@
                 //new user so clear the token
                 localStorageService.remove(userKey);
                 //store token
-                localStorageService.set(userKey, response.token);
+                localStorageService.set(userKey, response);
                 d.resolve(response);
             }, function(errorResponse){
                 console.log(response);

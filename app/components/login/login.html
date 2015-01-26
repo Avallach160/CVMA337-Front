@@ -1,0 +1,19 @@
+<div data-ng-if="!loggedIn">
+	<label>Email Address:</label>
+	<input type="email" data-ng-model="user.username">
+	<label>Password:</label>
+	<input type="password" data-ng-model="user.password">
+	<div>
+		<input type="checkbox" id="stay" data-ng-model="user.staySignedIn"><label for="stay">Stay signed in?</label>
+		<button type="btn" class="btn btn-success" data-ng-click="login()">Log in</button>
+	</div>
+	<p>
+		Don't have an account? <a ng-href="/#/register">Register here.</a>
+	</p>
+</div>
+<div data-ng-if="loggedIn">
+	<p>
+		Welcome <span data-ng-if="user.roadName">{{user.roadName}}</span><span data-ng-if="!user.roadName">{{user.firstName}} {{user.lastName}}</span>!
+		<button type="btn" class="btn btn-warning" data-ng-click="logout()">Logout</button>
+	</p>
+</div>

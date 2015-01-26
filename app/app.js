@@ -18,6 +18,7 @@
     'cvma.contact',
     'intcConfigurator',
     'cvma.login',
+    'cvma.register',
     'autoFocus',
     'cvma.config',
     'toaster'

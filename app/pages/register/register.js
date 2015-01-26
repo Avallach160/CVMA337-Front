@@ -4,7 +4,7 @@
     angular.module('cvma.login').controller('RegisterCtrl', RegisterCtrl);
 
     /* @ngInject */
-    function RegisterCtrl(UserService, localStorageService) {
+    function RegisterCtrl(UserService, localStorageService, $rootScope) {
         /*jshint validthis: true */
         var vm = this;
 
@@ -23,7 +23,7 @@
 
         function register(){
             UserService.register(vm.email, vm.password, vm.passwordConfirmation, vm.firstName, vm.lastName, vm.roadName, vm.motorcycle, vm.phoneNumber).then(function(response){
-                
+                $rootScope.$broadcast('registered', response);
             }, function(errorResponse){
                 
             });
