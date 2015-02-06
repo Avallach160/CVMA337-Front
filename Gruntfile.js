@@ -1,23 +1,23 @@
 'use strict';
- 
+
 module.exports = function(grunt) {
- 
+
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
- 
+
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
- 
+
     // Define the configuration for all the tasks
     grunt.initConfig({
- 
+
         // Project settings
         project: {
             // configurable paths
             app: require('./bower.json').appPath || 'app',
             dist: 'dist'
         },
- 
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             bower: {
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
                 ]
             }
         },
- 
+
         // The actual grunt server settings
         connect: {
             options: {
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    open: true,
+                    open: {appName: 'Firefox'},
                     base: [
                         '.tmp',
                         '<%= project.app %>'
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
+
         // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
                 src: ['test/spec/**/*.js']
             }
         },
- 
+
         // Empties folders to start fresh
         clean: {
             dist: {
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
             },
             server: '.tmp'
         },
- 
+
         // Add vendor prefixed styles
         autoprefixer: {
             options: {
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
- 
+
         // Automatically inject Bower components into the app
         wiredep: {
             app: {
@@ -169,7 +169,7 @@ module.exports = function(grunt) {
             //     ignorePath: '<%= project.app %>/bower_components/'
             // }
         },
- 
+
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
@@ -198,19 +198,19 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
+
         // Renames files for browser caching purposes
         filerev: {
             dist: {
                 src: [
                     '<%= project.dist %>/scripts/{,*/}*.js',
                     '<%= project.dist %>/styles/{,*/}*.css',
-                    
+
                     '<%= project.dist %>/styles/fonts/*'
                 ]
             }
         },
- 
+
         // Reads HTML for usemin blocks to enable smart builds that automatically
         // concat, minify and revision files. Creates configurations in memory so
         // additional tasks can operate on them
@@ -229,7 +229,7 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
+
         // Performs rewrites based on filerev and the useminPrepare configuration
         usemin: {
             html: ['<%= project.dist %>/{,*/}*.html'],
@@ -238,14 +238,14 @@ module.exports = function(grunt) {
                 assetsDirs: ['<%= project.dist %>']
             }
         },
- 
+
         // The following *-min tasks produce minified files in the dist folder
         cssmin: {
             options: {
                 // root: '<%= project.app %>'
             }
         },
- 
+
         htmlmin: {
             dist: {
                 options: {
@@ -266,7 +266,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
- 
+
         ngAnnotate: {
             dist: {
                 files: [{
@@ -277,7 +277,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
- 
+
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -310,7 +310,7 @@ module.exports = function(grunt) {
                 src: '{,*/}*.css'
             }
         },
- 
+
         // Run some tasks in parallel to speed up the build process
         concurrent: {
             server: [
@@ -320,10 +320,10 @@ module.exports = function(grunt) {
                 'compass'
             ],
             dist: [
-                'compass:dist',
+                'compass:dist'
             ]
         },
- 
+
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
@@ -349,7 +349,7 @@ module.exports = function(grunt) {
         // concat: {
         //   dist: {}
         // },
- 
+
         bump: {
             options: {
                 files: ['package.json', 'bower.json'],
@@ -365,7 +365,7 @@ module.exports = function(grunt) {
                 gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
             }
         },
- 
+
         replace: {
             appgen: {
                 // source files array (supports minimatch)
@@ -387,7 +387,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
- 
+
         // Test settings
         karma: {
             continuousInt: {
@@ -406,13 +406,13 @@ module.exports = function(grunt) {
             }
         }
     });
- 
- 
+
+
     grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
- 
+
         grunt.task.run([
             'clean:server',
             'wiredep',
@@ -422,12 +422,12 @@ module.exports = function(grunt) {
             'watch'
         ]);
     });
- 
+
     grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function(target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve:' + target]);
     });
- 
+
     grunt.registerTask('test', [
         'clean:server',
         'concurrent:test',
@@ -435,7 +435,7 @@ module.exports = function(grunt) {
         'connect:test',
         'karma'
     ]);
- 
+
     grunt.registerTask('unitTest', [
         'clean:server',
         'concurrent:test',
@@ -470,7 +470,7 @@ module.exports = function(grunt) {
         'usemin',
         'htmlmin'
     ]);
- 
+
     grunt.registerTask('default', [
         'newer:jshint',
         'test',

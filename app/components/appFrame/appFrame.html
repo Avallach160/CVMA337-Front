@@ -22,6 +22,13 @@
         <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)">{{item.title}}</a>
       </li>
     </ul>
+
+    <div class="login-pin">
+      <a ng-click="toggleLoginModal()">Member Login</a>
+      <modal-dialog show="showLoginModal">
+        <login></login>
+      </modal-dialog>
+    </div>
   </nav>
 
   <div class="content" ng-transclude></div>
