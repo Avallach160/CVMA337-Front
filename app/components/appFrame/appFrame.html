@@ -1,24 +1,28 @@
-<nav id="siteNav" ng-class="{ hideSearch: true }">
-  <ul>
-    <li ng-repeat="item in vm.intcAppFrame.nav.items" ng-class="{ active: item.active }">
-      <a href="javascript:{}" ng-show="item.subItems && item.subItems.length" ng-click="toggleSubMenu($event)">{{item.title}}<span class="intelicon-down"></span></a>
-
-      <ul ng-show="item.subItems && item.subItems.length">
-        <li ng-repeat="subItem in item.subItems" ng-class="{ active: subItem.active }">
-          <a ng-href="{{subItem.href || 'javascript:{}'}}" ng-click="handleClick(subItem)">{{subItem.title}}</a>
-        </li>
-      </ul>
-
-      <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)">{{item.title}}</a>
-    </li>
-  </ul>
-</nav>
-
 <div id="page" data-ng-class="{showNav: showNav}">
-  <img data-ng-src="../../images/banner.jpg" alt="">
+  <div class="banner">
+    <img data-ng-src="../../images/banner.png" alt="">
+  </div>
+
   <header id="pageHeader" class="navbar-intel">
-    <button class="btn btn-primary" data-ng-click="toggleMenu()"><i class="glyphicon glyphicon-align-justify"></i></button>
-    <h1 id="page-title">{{vm.intcAppFrame.title}}foo</h1>
+    <!--<button class="btn btn-primary" data-ng-click="toggleMenu()"><i class="glyphicon glyphicon-align-justify"></i></button>-->
+    <!--<h1 id="page-title">{{vm.intcAppFrame.header.title}}foo</h1>-->
   </header>
-  <div ng-transclude></div>
+
+  <nav id="siteNav" ng-class="{ hideSearch: true }">
+    <ul>
+      <li ng-repeat="item in vm.intcAppFrame.nav.items" ng-class="{ active: item.active }">
+        <a href="javascript:{}" ng-show="item.subItems && item.subItems.length" ng-click="toggleSubMenu($event)">{{item.title}}<span class="intelicon-down"></span></a>
+
+        <ul ng-show="item.subItems && item.subItems.length">
+          <li ng-repeat="subItem in item.subItems" ng-class="{ active: subItem.active }">
+            <a ng-href="{{subItem.href || 'javascript:{}'}}" ng-click="handleClick(subItem)">{{subItem.title}}</a>
+          </li>
+        </ul>
+
+        <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)">{{item.title}}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content" ng-transclude></div>
 </div>

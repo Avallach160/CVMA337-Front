@@ -1,7 +1,27 @@
-/* Space out content a bit */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background: #595959;
+  color: #E7E7E7;
+}
+
+a {
+  border-bottom: 1px dotted transparent;
+  color: $linkColor;
+
+  &:hover, &:focus {
+    border-bottom: 1px dotted $activeLinkColor;
+    color: $activeLinkColor;
+    text-decoration: none;
+  }
+
+  &:active, &.active {
+    //ToDo
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
