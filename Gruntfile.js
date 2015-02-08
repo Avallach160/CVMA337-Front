@@ -77,7 +77,8 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    open: {appName: 'Firefox'},
+                    open: true,
+                    // open: {appName: 'Firefox'},
                     base: [
                         '.tmp',
                         '<%= project.app %>'

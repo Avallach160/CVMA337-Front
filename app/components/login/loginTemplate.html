@@ -1,0 +1,11 @@
+<label>Email Address:</label>
+<input type="email" data-ng-model="user.username">
+<label>Password:</label>
+<input type="password" data-ng-model="user.password">
+<div>
+	<input type="checkbox" id="stay" data-ng-model="user.staySignedIn"><label for="stay">Stay signed in?</label>
+	<button type="btn" class="btn btn-success" data-ng-click="login()">Log in</button>
+</div>
+<p>
+	Don't have an account? <button type="btn" class="btn btn-link" data-ng-click="swapToNewUser()">Register here.</button>
+</p>

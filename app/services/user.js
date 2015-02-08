@@ -36,7 +36,6 @@
             };
             return webRequest.request(intcConfigurator.config.serviceRoot + 'auth/authenticate', 'POST', data).then(function(response){
                 localStorageService.set(userKey, response);
-                console.log(response);
             }, function(errorResponse){
                 toaster.pop('error', '', errorResponse);
             });
