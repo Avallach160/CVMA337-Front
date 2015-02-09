@@ -1,11 +1,28 @@
-<label>Email Address:</label>
-<input type="email" data-ng-model="user.username">
-<label>Password:</label>
-<input type="password" data-ng-model="user.password">
-<div>
-	<input type="checkbox" id="stay" data-ng-model="user.staySignedIn"><label for="stay">Stay signed in?</label>
-	<button type="btn" class="btn btn-success" data-ng-click="login()">Log in</button>
-</div>
+<form class="form-horizontal login-form" xmlns="http://www.w3.org/1999/html">
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="emailInput">E-mail address</label>
+
+    <div class="col-xs-6">
+      <input id="emailInput" class="form-control" name="email" type="email" data-ng-model="user.username"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="passwordInput">Password</label>
+
+    <div class="col-xs-6">
+      <input id="passwordInput" class="form-control" name="password" type="password" data-ng-model="user.password"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-6">
+      <button class="btn btn-success" type="submit" data-ng-click="login()">Login</button>
+      <input id="stay" type="checkbox" data-ng-model="user.staySignedIn"><label for="stay">Remember me</label>
+    </div>
+  </div>
+</form>
+
 <p>
 	Don't have an account? <button type="btn" class="btn btn-link" data-ng-click="swapToNewUser()">Register here.</button>
 </p>
