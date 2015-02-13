@@ -5,8 +5,12 @@
 
     function config(intcConfiguratorProvider){
 	  	intcConfiguratorProvider.register({
+  			serviceRoot: 'http://cvma.kairyt.com/services/'
+  		});
+
+	  	intcConfiguratorProvider.register({
   			HOST: 'localhost:9000',
   			serviceRoot: 'http://localhost:1337/'
-  		});
+  		});  		
     };
 })();

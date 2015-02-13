@@ -18,7 +18,7 @@
         ////////////////
 
         function getAll() {
-        	return webRequest.request(intcConfigurator.config.serviceRoot + 'user');
+        	return webRequest.request(intcConfigurator.config.serviceRoot + 'rank');
         };
 
         function getCurrent(){
