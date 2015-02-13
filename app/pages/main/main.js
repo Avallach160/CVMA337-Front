@@ -14,7 +14,7 @@
 
         function init() {
         	UserService.getAll().then(function(response){
-                vm.users = response;   
+                // vm.users = response;
             }, function(errorResponse){
                 
             });
