@@ -12,6 +12,11 @@ body {
 a {
   border-bottom: 1px dotted transparent;
   color: $linkColor;
+  padding: 0;
+
+  &.cursor-hand {
+    cursor: pointer;
+  }
 
   &:hover, &:focus {
     border-bottom: 1px dotted $activeLinkColor;
