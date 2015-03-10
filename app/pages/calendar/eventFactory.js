@@ -16,6 +16,12 @@
         	var d = $q.defer();
 
         	var events = [{
+        		start: new Date(2015, 2, 12, 10),
+        		end: new Date(2015, 2, 12, 17),
+        		title: 'Officer\'s meeting',
+        		location: 'Virgi\'s house',
+        		description: 'March officer meeting.'
+        	},{
         		start: new Date(2015, 2, 14, 10),
         		end: new Date(2015, 2, 14, 17),
         		title: 'Alex\'s house key ceremony',
