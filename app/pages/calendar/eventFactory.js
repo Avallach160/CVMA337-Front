@@ -40,11 +40,17 @@
         		location: 'Lions Gate Hotel 3410 Westover St, McClellan Park, CA 95652',
         		description: 'March chapter meeting.'
         	},{
-        		start: new Date(2015, 2, 29, 13),
+        		start: new Date(2015, 2, 29, 12),
         		end: new Date(2015, 2, 29, 17),
         		title: 'California Vietnam Veteran Memorial',
         		location: 'Vietnam Veterans Memorial, Capitol Park, State Capitol, Sacramento CA',
-        		description: 'There is no time for this posted yet but if we find out more details this event will be posted. For further information, check out the event posting on their website at http://cavbf.org/index.php/cvvm'
+        		description: 'We will be meeting up at the south-west corner of McKinley Park, on the corner of Alhambra Blvd and H st in Sacramento at NOON (1200hrs).  We\'ll ride out of McKinley KSU at 1220 and roll on over to Capitol Park as a pack, enjoy the ceremony, then disperse from there.'
+        	},{
+        		start: new Date(2015, 3, 1, 8, 30),
+        		end: new Date(2015, 3, 1, 17),
+        		title: 'Help Scott "Big Rig" Scott move to his new house',
+        		location: '7230 Kallie Kay Ln Sac 95823',
+        		description: 'old house is meet up spot; 7230 Kallie Kay Ln Sac 95823. new house address is 13445 Baywood Way Lathrop 95330'
         	},{
         		start: new Date(2015, 3, 25, 9),
         		end: new Date(2015, 3, 25, 17),
@@ -57,6 +63,18 @@
         		title: '1st Annual Michael Davis Jr Memorial Ride',
         		location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
         		description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226484'
+        	},{
+        		start: new Date(2015, 4, 15, 17),
+        		end: new Date(2015, 4, 15, 23),
+        		title: 'State / Regional Rally',
+        		location: 'VFW 8990 Kruitof Way Fair Oaks',
+        		description: '2015 State and regional rally.'
+        	},{
+        		start: new Date(2015, 4, 16, 10),
+        		end: new Date(2015, 4, 16, 15),
+        		title: 'State / Regional Rally',
+        		location: 'VFW 8990 Kruitof Way Fair Oaks',
+        		description: '2015 State and regional rally.'
         	}];
 
         	d.resolve(events);

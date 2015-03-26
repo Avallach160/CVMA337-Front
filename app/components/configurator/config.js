@@ -5,7 +5,7 @@
 
     function config(intcConfiguratorProvider){
 	  	intcConfiguratorProvider.register({
-  			serviceRoot: 'http://cvma.kairyt.com/services/'
+  			serviceRoot: 'http://cvma33-7.net/services/'
   		});
 
 	  	intcConfiguratorProvider.register({
