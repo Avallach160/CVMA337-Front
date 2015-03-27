@@ -19,7 +19,7 @@
           </li>
         </ul>
 
-        <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)">{{item.title}}</a>
+        <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)" target="{{item.target}}">{{item.title}}</a>
       </li>
     </ul>
 

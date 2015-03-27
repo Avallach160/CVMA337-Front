@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                     '<%= project.app %>/pages/**/*.js',
                     '<%= project.app %>/services/*.js'
                 ],
-                tasks: ['newer:jshint:all'],
+                //tasks: ['newer:jshint:all'],
                 options: {
                     livereload: true
                 }
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 files: [
                     'test/spec/**/*.js'
                 ],
-                tasks: ['newer:jshint:test', 'karma']
+                //tasks: ['newer:jshint:test', 'karma']
             },
             compass: {
                 files: [

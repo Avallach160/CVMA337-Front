@@ -46,18 +46,30 @@
         		location: 'Vietnam Veterans Memorial, Capitol Park, State Capitol, Sacramento CA',
         		description: 'There is no time for this posted yet but if we find out more details this event will be posted. For further information, check out the event posting on their website at http://cavbf.org/index.php/cvvm'
         	},{
-        		start: new Date(2015, 3, 25, 9),
-        		end: new Date(2015, 3, 25, 17),
-        		title: '10th Annual Andy Stevens Memorial Ride',
-        		location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
-        		description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226483'
-        	},{
-        		start: new Date(2015, 4, 3, 9),
-        		end: new Date(2015, 4, 3, 17),
-        		title: '1st Annual Michael Davis Jr Memorial Ride',
-        		location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
-        		description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226484'
-        	}];
+                start: new Date(2015, 3, 19, 11),
+                end: new Date(2015, 3, 19, 17),
+                title: 'Charity Car & Bike Show',
+                location: '11476 Sunrise Gold Circle Rancho Cordova, CA',
+                description: 'Illuminati is putting on a car and bike show to help raise money for Homes For Our Troops recipient Cristian Valle.'
+            },{
+                start: new Date(2015, 3, 25, 9),
+                end: new Date(2015, 3, 25, 17),
+                title: '10th Annual Andy Stevens Memorial Ride',
+                location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
+                description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226483'
+            },{
+                start: new Date(2015, 4, 3, 9),
+                end: new Date(2015, 4, 3, 17),
+                title: '1st Annual Michael Davis Jr Memorial Ride',
+                location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
+                description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226484'
+            },{
+                start: new Date(2015, 5, 19, 18),
+                end: new Date(2015, 5, 19, 22),
+                title: 'George "Sandman" Sannadan\'s college graduation',
+                location: 'Memorial Auditorium 1515 J St. Sac 95814',
+                description: ''
+            }];
 
         	d.resolve(events);
 
