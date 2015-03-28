@@ -52,6 +52,10 @@
                 name: 'Troy "Dutch" Keath',
                 email: 'troykeath@att.net'
             },{ 
+                position: 'Public Relations',
+                name: 'Justin "Wardog" McCarty',
+                email: 'jnr.mccarty@yahoo.com'
+            },{ 
                 position: 'Road Captain',
                 name: 'Virgi "Trouble" Bondi',
                 email: 'virgi@surewest.net'
