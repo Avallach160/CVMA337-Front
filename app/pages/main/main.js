@@ -13,11 +13,11 @@
         init();
 
         function init() {
-        	UserService.getAll().then(function(response){
-                // vm.users = response;
-            }, function(errorResponse){
+        	// UserService.getAll().then(function(response){
+         //        // vm.users = response;
+         //    }, function(errorResponse){
                 
-            });
+         //    });
         }
     }
 })();

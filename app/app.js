@@ -18,6 +18,7 @@
     'cvma.calendar',
     'cvma.photos',
     'cvma.contact',
+    'cvma.minutes',
     'intcConfigurator',
     // 'cvma.login',
     // 'cvma.register',

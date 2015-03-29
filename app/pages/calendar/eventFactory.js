@@ -52,6 +52,12 @@
         		location: '7230 Kallie Kay Ln Sac 95823',
         		description: 'old house is meet up spot; 7230 Kallie Kay Ln Sac 95823. new house address is 13445 Baywood Way Lathrop 95330'
         	},{
+                start: new Date(2015, 3, 18, 13),
+                end: new Date(2015, 3, 18, 17),
+                title: 'Chapter meeting',
+                location: 'Fair Oaks VFW',
+                description: 'April chapter meeting. For the smooth road in, follow this path: https://goo.gl/maps/lUwnu'
+            },{
                 start: new Date(2015, 3, 19, 11),
                 end: new Date(2015, 3, 19, 17),
                 title: 'Charity Car & Bike Show',
@@ -74,13 +80,19 @@
                 end: new Date(2015, 4, 15, 23),
                 title: 'State / Regional Rally',
                 location: 'VFW 8990 Kruitof Way Fair Oaks',
-                description: '2015 State and regional rally.'
+                description: '2015 State and regional rally. Meet & greet.'
             },{
                 start: new Date(2015, 4, 16, 10),
-                end: new Date(2015, 4, 16, 15),
+                end: new Date(2015, 4, 16, 23),
                 title: 'State / Regional Rally',
                 location: 'VFW 8990 Kruitof Way Fair Oaks',
-                description: '2015 State and regional rally.'
+                description: '2015 State and regional rally. State meeting from 1000 - 1200. Lunch from 1200 - 1300. Regional meeting from 1300 - 1500. Ride from 1700 - 1900. Drinks at VFW bar until whenever.'
+            },{
+                start: new Date(2015, 4, 17, 10),
+                end: new Date(2015, 4, 17, 15),
+                title: 'State / Regional Rally',
+                location: 'VFW 8990 Kruitof Way Fair Oaks',
+                description: '2015 State and regional rally. Ride around the capital for those left in town.'
             },{
                 start: new Date(2015, 5, 19, 18),
                 end: new Date(2015, 5, 19, 22),

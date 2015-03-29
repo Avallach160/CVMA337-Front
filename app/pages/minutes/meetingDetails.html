@@ -1,0 +1,173 @@
+<div class="row">
+	<div class="col-xs-12 center">
+		<h3>Chapter 33-7 Meeting Minutes</h3>
+		{{vm.minutes.date}}
+	</div>
+</div>
+<div>
+	{{vm.minutes.intro}}
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.introBullets">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Present:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.present">
+			{{i.value}}
+		</li>
+	</ul>
+	<p>
+		{{vm.minutes.presentCounts.full}} Full members present
+		<br>
+		{{vm.minutes.presentCounts.aux}} Auxillary members present
+		<br>
+		{{vm.minutes.presentCounts.support}} Support members present
+		<br>
+		{{vm.minutes.presentCounts.guest}} Guest
+		<span data-ng-if="vm.minutes.presentCounts.namesAttached">
+			<br>
+			Name list attached.
+		</span>	
+	</p>
+</div>
+<div>
+	<label>Introduction of Guests and New members:</label>
+	<p>
+		{{vm.minutes.newMemberIntro}}
+	</p>
+</div>
+<div>
+	<label>New Member Induction Ceremony:</label>
+	<p>
+		{{vm.minutes.newMemberInduction}}
+	</p>
+</div>
+<div>
+	<label>Commander:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.commanderBullets">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Committees:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.committeesBullets">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Old Business:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.oldBusiness">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>New Business:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.newBusiness">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>XO:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.xo">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Secretary:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.secretary">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Treasurer:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.treasurer">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Sgt at Arms:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.saa">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Webmaster:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.webmaster">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Rides and Events:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.ridesAndEvents">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<label>Good of the Order:</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.goodOfTheOrder">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
+<div>
+	<p>
+		Minutes submitted by:
+		<br>
+		{{vm.minutes.submittedBy}}
+		<br>
+		Chapter Secretary
+		<br>
+		CVMA 33-7
+	</p>
+</div>
+<div>
+	<label>Attendance Name List</label>
+	<label>Full Members</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.attendees.full">
+			{{i.value}}
+		</li>
+	</ul>
+	<label>Support Members</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.attendees.support">
+			{{i.value}}
+		</li>
+	</ul>
+	<label>Auxillary</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.attendees.aux">
+			{{i.value}}
+		</li>
+	</ul>
+	<label>Guests</label>
+	<ul>
+		<li data-ng-repeat="i in vm.minutes.attendees.guest">
+			{{i.value}}
+		</li>
+	</ul>
+</div>
