@@ -38,7 +38,7 @@
                 guest: 1,
                 namesAttached: true
             },
-            newMemberIntro: 'Scott Scott, Anthony Indrieri, Wayne Barnes, Gene Hawley-(new members) and Andrew Perogas (applicant) are present today. Welcome Brothers.',
+            newMemberIntro: 'Scott, Anthony, Wayne, Gene-(new members) and Andrew (applicant) are present today. Welcome Brothers.',
             newMemberInduction: 'No new members inducted this month.',
             commanderBullets: [{
                 value: 'J'
@@ -57,7 +57,7 @@
                 value: 'The Pathway Home Poker Ride: Virgi Bondi volunteered to Co-chair.  Date to be determined. Route will be in the Sacramento region, using a portion known H-49 loop.'
             }],
             oldBusiness: [{
-                value: 'October minutes reported; John Austin motioned for minutes to be accepted, 2d by Anthony Indrieri; Chapter vote to accept meeting minutes as posted; passed: 13 Yes / 0 No / 0 Abstain.'
+                value: 'October minutes reported; John Austin motioned for minutes to be accepted, 2d by Anthony; Chapter vote to accept meeting minutes as posted; passed: 13 Yes / 0 No / 0 Abstain.'
             },{
                 value: 'Guidon: discussion to utilize the same vendor that makes the guidon’s for National.  Preliminary info and cost; guidon is apx $135, streamers are $40 (Nationals attendance).  Virgi offered to front the expense pending the next couple of chapter funds raisers. Motion to approve purchase by John Austin, 2d by Ray Pursley.  13 yes / 0 No / 0 / Abstain.  Passed.'
             },{
@@ -66,15 +66,15 @@
             newBusiness: [{
                 value: 'State calendar (website) shelved for now, it is growing too big and difficult.'
             },{
-                value: 'Clean up project: to assist Dave Schmidt and family.  (Recycle metal-money to chapter). Dave & Justin meet with Sims Metals to get info for the metal bin & pick up.  This would assist Schmidt family with cleaning up Grandfathers auto shop and raise some money for the chapter.  Dates: Feb 21/22 and 28/29 as needed.  Mike Bowser motioned to approve chapter assistance, 2d by Troy Keith; passed: 15 yes / 0 no / 0 abstain.'
+                value: 'Clean up project: to assist Dave Schmidt and family.  (Recycle metal-money to chapter). Dave & Justin meet with Sims Metals to get info for the metal bin & pick up.  This would assist family with cleaning up Grandfathers auto shop and raise some money for the chapter.  Dates: Feb 21/22 and 28/29 as needed.  Mike motioned to approve chapter assistance, 2d by Troy Keith; passed: 15 yes / 0 no / 0 abstain.'
             },{
                 value: '2014 Financial report due, Virgi and Troy will complete the report.'
             },{
-                value: 'T-shirt designs for the State & Regional meeting:  2 designs discussed. Mike Bowser also recommended that we get a “pre-order” going to minimize the chapters out of pocket expense.'
+                value: 'T-shirt designs for the State & Regional meeting:  2 designs discussed. Mike also recommended that we get a “pre-order” going to minimize the chapters out of pocket expense.'
             },{
                 value: 'Motion to place a dollar cap on the “Downed Bike Fund”, motion to cap at $500, any additional money to be held for future incidents.  Motioned by Ray Pursley to approve, 2d by Virgi Bondi; passed: 12 yes / 0 no / 0 abstain.'
             },{
-                value: 'Next meeting to be in 28 February 2015, location Grandpa Schmidt’s auto shop.'
+                value: 'Next meeting to be in 28 February 2015, location Grandpas auto shop.'
             }],
             xo: [],
             secretary: [{
@@ -103,7 +103,7 @@
                 value: 'The Pathway Home Poker Run: Date to be determined.'
             }],
             goodOfTheOrder: [{
-                value: 'Mike Bowser: the Intel Unit at Beale AFB is having an Open House in May.  These are the folks who over watch our troops with the drones.  For those that do not have military I.D’s, Mike is willing to be their sponsor so they may attend.  He will have further details, as Beale has security requirements for all who enter the base.'
+                value: 'Mike: the Intel Unit at Beale AFB is having an Open House in May.  These are the folks who over watch our troops with the drones.  For those that do not have military I.D’s, Mike is willing to be their sponsor so they may attend.  He will have further details, as Beale has security requirements for all who enter the base.'
             },{
                 value: 'Road Captain: please remember no show boating on chapter rides. Safety First.'
             },{
@@ -118,52 +118,52 @@
             submittedBy: 'John Austin',
             attendees: {
                 full: [{
-                    value: 'Michael Bowser'
+                    value: 'Michael '
                 },{
                     value: 'Justin McCarty'
                 },{
                     value: 'Ray Pursley'
                 },{
-                    value: 'Dane Tassara'
+                    value: 'Dane '
                 },{
                     value: 'John Austin'
                 },{
-                    value: 'George Sannadan'
+                    value: 'George '
                 },{
-                    value: 'David Schmidt'
+                    value: 'David '
                 },{
                     value: 'Virgi Bondi'
                 },{
                     value: 'Troy Keath'
                 },{
-                    value: 'Mike Lafolley'
+                    value: 'Mike '
                 },{
-                    value: 'Eugene Thull'
+                    value: 'Eugene '
                 },{
                     value: 'Collin Baird'
                 },{
-                    value: 'Scott Scott'
+                    value: 'Scott '
                 },{
-                    value: 'Wayne Barnes'
+                    value: 'Wayne '
                 },{
-                    value: 'Anthony Indreiri'
+                    value: 'Anthony '
                 },{
-                    value: 'Gene Hawley'
+                    value: 'Gene '
                 }],
                 support: [{
-                    value: 'Mark Sconce'
+                    value: 'Mark '
                 }],
                 aux: [{
-                    value: 'Celeste Schmidt'
+                    value: 'Celeste '
                 }],
                 guest: [{
-                    value: 'Andrew Perogas (application pending)'
+                    value: 'Andrew  (application pending)'
                 }]
             }
     	},{
     		id: 2,
     		dateMoment: moment('28 February 2015'),
-            intro: 'This month’s meeting/event was a chapter “clean-up” to assist the family of Dave Schmidt and scrap metal fund raiser. We meet up at Grandpas old repair shop, Del Paso Heights, CA.',
+            intro: 'This month’s meeting/event was a chapter “clean-up” to assist the family of Dave and scrap metal fund raiser. We meet up at Grandpas old repair shop, Del Paso Heights, CA.',
             introBullets: [{
                 value: '21st and 28th designated clean up days.'
             },{
@@ -232,7 +232,7 @@
                 value: 'The Pathway Home Poker Run: Date to be determined.'
             }],
             goodOfTheOrder: [{
-                value: 'Mike Bowser: the Intel Unit at Beale AFB is having an Open House in May.  These are the folks who over watch our troops with the drones.  For those that do not have military I.D’s, Mike is willing to be their sponsor so they may attend.  He will have further details, as Beale has security requirements for all who enter the base.'
+                value: 'Mike: the Intel Unit at Beale AFB is having an Open House in May.  These are the folks who over watch our troops with the drones.  For those that do not have military I.D’s, Mike is willing to be their sponsor so they may attend.  He will have further details, as Beale has security requirements for all who enter the base.'
             },{
                 value: 'Road Captain: please remember no show boating on chapter rides. Safety First.'
             },{
@@ -241,35 +241,35 @@
             submittedBy: 'John Austin',
             attendees: {
                 full: [{
-                    value: 'Michael Bowser'
+                    value: 'Michael '
                 },{
                     value: 'Justin McCarty'
                 },{
                     value: 'Ray Pursley'
                 },{
-                    value: 'Dane Tassara'
+                    value: 'Dane '
                 },{
                     value: 'John Austin'
                 },{
-                    value: 'David Schmidt'
+                    value: 'David '
                 },{
                     value: 'Virgi Bondi'
                 },{
                     value: 'Troy Keath'
                 },{
-                    value: 'Steve Wichers'
+                    value: 'Steve '
                 },{
-                    value: 'Mike Lafolley'
+                    value: 'Mike '
                 },{
-                    value: 'Eugene Thull'
+                    value: 'Eugene '
                 },{
-                    value: 'Anthony Indreiri'
+                    value: 'Anthony '
                 },{
-                    value: 'Gene Hawley'
+                    value: 'Gene '
                 }],
                 support: [],
                 aux: [{
-                    value: 'Celeste Schmidt'
+                    value: 'Celeste '
                 }],
                 guest: [{
                     value: 'Jerry'
