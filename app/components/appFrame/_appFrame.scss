@@ -1,9 +1,9 @@
 .banner {
+  background: #000000 url(/images/banner_background.jpg) no-repeat center center;
   border-bottom: 1px solid #777777;
   margin-bottom: 15px;
   padding: 5px 0;
   @include box-shadow(0px 10px 10px 0px rgba(0, 0, 0, 0.4));
-  @include background-image(url("../images/banner_background.jpg"));
 
   > img {
     display: block;
@@ -11,42 +11,47 @@
   }
 }
 
-nav {
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 20px;
-  vertical-align: top;
+.site-container {
+  margin: 0 auto;
+  max-width: 960px;
 
-  > ul {
-    list-style: none;
+  nav {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
 
-    > li {
-      border-bottom: 1px solid;
-      margin: 5px 0;
-      padding-right: 5px;
-      padding-bottom: 5px;
+    > ul {
+      list-style: none;
+      padding: 0;
 
-      > a {
-        &:hover, &:focus {
-          border-bottom: transparent;
-          @include text-shadow(1px 1px 0 rgba(0, 0, 0, 1));
+      > li {
+        border-bottom: 1px solid;
+        margin: 5px 0;
+        padding-right: 5px;
+        padding-bottom: 5px;
+
+        > a {
+          &:hover, &:focus {
+            border-bottom: transparent;
+            @include text-shadow(1px 1px 0 rgba(0, 0, 0, 1));
+          }
         }
       }
     }
+
+    .login-pin {
+      background-color: #0F0E13;
+      border: 1px solid #777777;
+      border-top: none;
+      padding: 5px 10px;
+      position: absolute;
+      right: 20px;
+      top: $headerHeight;
+      @include border-bottom-radius(5px);
+    }
   }
 
-  .login-pin {
-    background-color: #0F0E13;
-    border: 1px solid #777777;
-    border-top: none;
-    padding: 5px 10px;
-    position: absolute;
-    right: 20px;
-    top: $headerHeight;
-    @include border-bottom-radius(5px);
+  .content {
+    display: inline-block;
   }
-}
-
-.content {
-  display: inline-block;
 }

@@ -8,25 +8,29 @@
     <!--<h1 id="page-title">{{vm.intcAppFrame.header.title}}foo</h1>-->
   </header>
 
-  <nav id="siteNav" ng-class="{ hideSearch: true }">
-    <ul>
-      <li ng-repeat="item in vm.intcAppFrame.nav.items" ng-class="{ active: item.active }">
-        <a href="javascript:{}" ng-show="item.subItems && item.subItems.length" ng-click="toggleSubMenu($event)">{{item.title}}<span class="intelicon-down"></span></a>
+  <div class="site-container">
+    <nav id="siteNav" ng-class="{ hideSearch: true }">
+      <ul>
+        <li ng-repeat="item in vm.intcAppFrame.nav.items" ng-class="{ active: item.active }">
+          <a href="javascript:{}" ng-show="item.subItems && item.subItems.length" ng-click="toggleSubMenu($event)">{{item.title}}<span
+            class="intelicon-down"></span></a>
 
-        <ul ng-show="item.subItems && item.subItems.length">
-          <li ng-repeat="subItem in item.subItems" ng-class="{ active: subItem.active }">
-            <a ng-href="{{subItem.href || 'javascript:{}'}}" ng-click="handleClick(subItem)">{{subItem.title}}</a>
-          </li>
-        </ul>
+          <ul ng-show="item.subItems && item.subItems.length">
+            <li ng-repeat="subItem in item.subItems" ng-class="{ active: subItem.active }">
+              <a ng-href="{{subItem.href || 'javascript:{}'}}" ng-click="handleClick(subItem)">{{subItem.title}}</a>
+            </li>
+          </ul>
 
-        <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)" target="{{item.target}}">{{item.title}}</a>
-      </li>
-    </ul>
+          <a ng-show="!item.subItems || !item.subItems.length" ng-href="{{item.href || 'javascript:{}'}}" ng-click="handleClick(item)"
+             target="{{item.target}}">{{item.title}}</a>
+        </li>
+      </ul>
 
-    <div class="login-pin">
-      <login></login>
-    </div>
-  </nav>
+      <div class="login-pin">
+        <login></login>
+      </div>
+    </nav>
 
-  <div class="content" ng-transclude></div>
+    <div class="content" ng-transclude></div>
+  </div>
 </div>
