@@ -15,5 +15,5 @@
 		<span ng-show="contactForm.message.$error.required">Required.</span>
 	</span>
 	<br>
-	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()" data-ng-disabled="contactForm.$invalid">Send</button>
+	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()" data-ng-disabled="contactForm.$invalid || vm.sending">Send</button>
 </form>

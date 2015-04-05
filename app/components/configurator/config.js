@@ -10,7 +10,7 @@
 
 	  	intcConfiguratorProvider.register({
   			HOST: 'localhost:9000',
-  			serviceRoot: 'http://localhost:1337/'
+  			// serviceRoot: 'http://localhost:1337/'
   		});  		
     };
 })();

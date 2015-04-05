@@ -9,6 +9,7 @@
         var vm = this;
         vm.message = {};
         vm.sendMessage = sendMessage;
+        vm.sending = false;
 
         init();
 
@@ -23,7 +24,13 @@
             if (vm.message.bike)
                 body += " Bike: " + vm.message.bike + ".";
             body += " Message: " + vm.message.body;
-            contactFactory.send('', subject, body);
+
+            vm.sending = true;
+            contactFactory.send('cbaird@kairyt.com', subject, body).then(function(response){
+                vm.sending = false;
+            }, function(errorResponse){
+                vm.sending = false;
+            });
         }
     }
 })();
