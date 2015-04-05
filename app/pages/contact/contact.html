@@ -1,10 +1,19 @@
 <h3 class="center underline">Contact Us</h3>
 <form novalidate name="contactForm">
-	<input type="text" class="form-control" placeholder="Name" name="name" data-ng-model="vm.message.name">
-	<input type="text" class="form-control" placeholder="Email" name="email" data-ng-model="vm.message.email">
+	<input type="text" class="form-control" placeholder="Name" name="name" data-ng-model="vm.message.name" required>
+	<span style="color:red" ng-show="contactForm.name.$invalid">
+		<span ng-show="contactForm.name.$error.required">Required.</span>
+	</span>	
+	<input type="email" class="form-control" placeholder="Email" name="email" data-ng-model="vm.message.email" required>
+	<span style="color:red" ng-show="contactForm.email.$invalid">
+		<span ng-show="contactForm.email.$error.required || contactForm.email.$error.email">Required.</span>
+	</span>
 	<input type="text" class="form-control" placeholder="Phone Number" name="phone" data-ng-model="vm.message.phone">
 	<input type="text" class="form-control" placeholder="Type of Motorcycle & Size" name="bike" data-ng-model="vm.message.bike">
-	<input type="text" class="form-control" placeholder="Subject" name="subject" data-ng-model="vm.message.subject">
-	<textarea class="form-control" placeholder="Message" name="message" data-ng-model="vm.message.body"></textarea>
-	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()">Send</button>
+	<textarea class="form-control" placeholder="Message" name="message" data-ng-model="vm.message.body" required></textarea>
+	<span style="color:red" ng-show="contactForm.message.$invalid">
+		<span ng-show="contactForm.message.$error.required">Required.</span>
+	</span>
+	<br>
+	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()" data-ng-disabled="contactForm.$invalid || vm.sending">Send</button>
 </form>

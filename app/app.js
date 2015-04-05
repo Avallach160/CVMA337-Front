@@ -17,7 +17,7 @@
     'cvma.chainOfCommand',
     'cvma.calendar',
     'cvma.photos',
-    // 'cvma.contact',
+    'cvma.contact',
     'cvma.minutes',
     'intcConfigurator',
     // 'cvma.login',
