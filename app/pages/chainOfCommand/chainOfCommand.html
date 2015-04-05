@@ -1,15 +1,20 @@
-<h3 class="center underline">Chain of Command</h3>
-<table style="width: 600px">
-	<thead>
-		<th>Rank</th>
-		<th>Name</th>
-		<th>Email</th>
-	</thead>
-	<tbody>
-		<tr data-ng-repeat="officer in vm.officers">
-			<td>{{officer.position}}</td>
-			<td>{{officer.name}}</td>
-			<td><a data-ng-href="mailto:{{officer.email}}">{{officer.email}}</a></td>
-		</tr>		
-	</tbody>
-</table>
+<div class="coc-content">
+  <h3 class="center">Chain of Command</h3>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-ng-repeat="officer in vm.officers">
+      <td>{{officer.position}}</td>
+      <td>{{officer.name}}</td>
+      <td><a data-ng-href="mailto:{{officer.email}}">{{officer.email}}</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
