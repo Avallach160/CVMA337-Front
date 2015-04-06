@@ -1,3 +1,41 @@
-.fc-event-inner {
-	cursor: pointer;
+.fc-grid {
+  .fc-event {
+    $fcBackground: #84A58E;
+
+    background: $fcBackground;
+    border-color: darken($fcBackground, 10%);
+    color: #593535;
+    padding: 0 2px;
+
+    &:hover {
+      background: darken($fcBackground, 30%);
+      border-color: darken($fcBackground, 40%);
+      color: $linkColor;
+    }
+
+    .fc-event-inner {
+      cursor: pointer;
+    }
+  }
+
+  > table {
+    $borderColor: #3B3B3B;
+
+    .fc-widget-header {
+      border: none;
+      border-bottom: 1px solid $borderColor;
+    }
+
+    .fc-widget-content {
+      border-color: $borderColor;
+
+      &.fc-state-highlight {
+        background: #8F8F8F;
+
+        .fc-day-number {
+          color: #000000;
+        }
+      }
+    }
+  }
 }
