@@ -1,16 +1,4 @@
 .login-form {
-  .btn-success {
-    border-color: #192E60;
-    display: block;
-    font-weight: bold;
-    @include background-image(linear-gradient(#364974, #364974 50%, #182E5F 50%));
-
-    &:hover {
-      border-color: #661813;
-      @include background-image(linear-gradient(#A43E39, #A43E39 50%, #98231C 50%));
-    }
-  }
-
   input[type='checkbox'] {
     margin-right: 5px;
     margin-top: 10px;
