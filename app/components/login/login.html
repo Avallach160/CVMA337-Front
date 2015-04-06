@@ -4,6 +4,6 @@
 <div data-ng-if="loggedIn">
 	<p>
 		Welcome <span data-ng-if="user.roadName">{{user.roadName}}</span><span data-ng-if="!user.roadName">{{user.firstName}} {{user.lastName}}</span>!
-		<button type="btn" class="btn btn-warning" data-ng-click="logout()">Logout</button>
+		<button type="button" class="btn btn-warning" data-ng-click="logout()">Logout</button>
 	</p>
 </div>

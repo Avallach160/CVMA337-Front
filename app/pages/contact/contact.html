@@ -1,19 +1,63 @@
-<h3 class="center underline">Contact Us</h3>
-<form novalidate name="contactForm">
-	<input type="text" class="form-control" placeholder="Name" name="name" data-ng-model="vm.message.name" required>
-	<span style="color:red" ng-show="contactForm.name.$invalid">
-		<span ng-show="contactForm.name.$error.required">Required.</span>
-	</span>	
-	<input type="email" class="form-control" placeholder="Email" name="email" data-ng-model="vm.message.email" required>
-	<span style="color:red" ng-show="contactForm.email.$invalid">
-		<span ng-show="contactForm.email.$error.required || contactForm.email.$error.email">Required.</span>
-	</span>
-	<input type="text" class="form-control" placeholder="Phone Number" name="phone" data-ng-model="vm.message.phone">
-	<input type="text" class="form-control" placeholder="Type of Motorcycle & Size" name="bike" data-ng-model="vm.message.bike">
-	<textarea class="form-control" placeholder="Message" name="message" data-ng-model="vm.message.body" required></textarea>
-	<span style="color:red" ng-show="contactForm.message.$invalid">
-		<span ng-show="contactForm.message.$error.required">Required.</span>
-	</span>
-	<br>
-	<button type="button" class="btn btn-primary" data-ng-click="vm.sendMessage()" data-ng-disabled="contactForm.$invalid || vm.sending">Send</button>
-</form>
+<div class="contact-content">
+  <h3 class="center underline">Contact Us</h3>
+
+  <form class="form-horizontal" novalidate name="contactForm">
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="nameInput">Name</label>
+
+      <div class="col-sm-8">
+        <input id="nameInput" class="form-control" name="name" type="text" data-ng-model="vm.message.name" required>
+
+        <span class="required-indicator" ng-show="contactForm.name.$invalid">
+          <span ng-show="contactForm.name.$error.required"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="emailInput">E-mail</label>
+
+      <div class="col-sm-8">
+        <input id="emailInput" class="form-control" name="email" type="email" data-ng-model="vm.message.email" required>
+
+        <span class="required-indicator" ng-show="contactForm.email.$invalid">
+          <span ng-show="contactForm.email.$error.required || contactForm.email.$error.email"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="phoneInput">Phone number</label>
+
+      <div class="col-sm-8">
+        <input id="phoneInput" class="form-control" name="phone" type="text" data-ng-model="vm.message.phone">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="bikeInput">Motorcycle type &amp; size</label>
+
+      <div class="col-sm-8">
+        <input id="bikeInput" class="form-control" name="bike" type="text" data-ng-model="vm.message.bike">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="msgInput">Message</label>
+
+      <div class="col-sm-8">
+        <textarea id="msgInput" class="form-control" name="message" data-ng-model="vm.message.body" required></textarea>
+
+        <span class="required-indicator" ng-show="contactForm.message.$invalid">
+          <span ng-show="contactForm.message.$error.required"></span>
+        </span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="col-sm-offset-4 col-sm-8">
+      <button type="button" class="btn btn-primary btn-cvma" data-ng-click="vm.sendMessage()" data-ng-disabled="contactForm.$invalid || vm.sending">Send</button>
+    </div>
+  </form>
+</div>

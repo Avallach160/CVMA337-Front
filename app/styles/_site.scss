@@ -34,6 +34,18 @@ h1, h2, h3 {
 }
 
 /////----- general classes
+.btn-cvma {
+  border-color: #192E60;
+  display: block;
+  font-weight: bold;
+  @include background-image(linear-gradient(#364974, #364974 50%, #182E5F 50%));
+
+  &:hover {
+    border-color: #661813;
+    @include background-image(linear-gradient(#A43E39, #A43E39 50%, #98231C 50%));
+  }
+}
+
 .center {
   text-align: center;
 }
@@ -69,6 +81,48 @@ h1, h2, h3 {
 
     th, td {
       padding: 0 10px;
+    }
+  }
+}
+
+.contact-content {
+  > form {
+    margin-top: 20px;
+
+    div.form-group {
+      > div {
+        padding: 0;
+        position: relative;
+
+        span.required-indicator {
+          position: absolute;
+          right: -11em;
+          top: 0;
+
+          > span {
+            position: relative;
+          }
+
+          > span::before {
+            background-color: #990000;
+            content: 'This field is required';
+            padding: 6px;
+            @include box-shadow(2px 3px 2px 0px rgba(0, 0, 0, 1));
+          }
+
+          > span::after {
+            right: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-right-color: #990000;
+            border-width: 10px;
+          }
+        }
+      }
     }
   }
 }
