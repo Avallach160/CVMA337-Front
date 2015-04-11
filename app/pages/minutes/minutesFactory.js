@@ -456,12 +456,14 @@
       var d = $q.defer();
       var v = {};
 
-      d.resolve(_.map(minutes, function(m){
+      var mapped = _.map(minutes, function(m){
         v = {};
         v.date = formatDate(m.dateMoment);
         v.id = m.id;
         return v;
-      }));
+      });
+
+      d.resolve(_.sortByOrder(mapped, ['date'], [false]));
 
       return d.promise;
     }
