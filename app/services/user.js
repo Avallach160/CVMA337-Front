@@ -26,44 +26,67 @@
             return localStorageService.get(userKey);
         }
 
-        function getOfficers(){
-            var o = [{ 
-                position: 'State Representative',
-                name: 'John "Wolfhound" Coon',
-                email: 'johncoon.d127@gmail.com'
-            },{ 
-                position: 'Commander',
-                name: 'Justin "Wardog" McCarty',
-                email: 'jnr.mccarty@yahoo.com'
-            },{ 
-                position: 'Executive Officer',
-                name: 'Virgi "Trouble" Bondi',
-                email: 'virgi@surewest.net'
-            },{ 
-                position: 'Sergeant At Arms',
-                name: 'Ray "Banjo" Pursley',
-                email: 'raymondpursley@yahoo.com'
-            },{ 
-                position: 'Secretary',
-                name: 'John Austin',
-                email: 'jncaustin@frontiernet.net'
-            },{ 
-                position: 'Treasurer',
-                name: 'Troy "Dutch" Keath',
-                email: 'troykeath@att.net'
-            },{ 
-                position: 'Public Relations',
-                name: 'Justin "Wardog" McCarty',
-                email: 'jnr.mccarty@yahoo.com'
-            },{ 
-                position: 'Road Captain',
-                name: 'Virgi "Trouble" Bondi',
-                email: 'virgi@surewest.net'
-            },{ 
-                position: 'Webmaster',
-                name: 'Collin "Chaps" Baird ',
-                email: 'cvma33.7@gmail.com'
-            }];
+      function getOfficers() {
+        var o = [{
+                   position: 'State Representative',
+                   fname:    'John',
+                   lname:    'Coon',
+                   nickname: '"Wolfhound"',
+                   email:    'johncoon.d127@gmail.com'
+                 }, {
+                   position: 'Commander',
+                   fname:    'Justin',
+                   lname:    'McCarty',
+                   nickname: '"Wardog"',
+                   email:    'jnr.mccarty@yahoo.com',
+                   imgname:  'justin_mccarty'
+                 }, {
+                   position: 'Executive Officer',
+                   fname:    'Virgi',
+                   lname:    'Bondi',
+                   nickname: '"Trouble"',
+                   email:    'virgi@surewest.net',
+                   imgname:  'virgi_bondi'
+                 }, {
+                   position: 'Sergeant At Arms',
+                   fname:    'Ray',
+                   lname:    'Pursley',
+                   nickname: '"Banjo"',
+                   email:    'raymondpursley@yahoo.com',
+                   imgname:  'ray_pursley'
+                 }, {
+                   position: 'Secretary',
+                   fname:    'John ',
+                   lname:    'Austin',
+                   nickname: '',
+                   email:    'jncaustin@frontiernet.net',
+                   imgname:  'john_austin'
+                 }, {
+                   position: 'Treasurer',
+                   fname:    'Troy',
+                   lname:    'Keath',
+                   nickname: '"Dutch"',
+                   email:    'troykeath@att.net',
+                   imgname:  'troy_keath'
+                 }, {
+                   position: 'Public Relations',
+                   fname:    'Justin',
+                   lname:    'McCarty',
+                   nickname: '"Wardog"',
+                   email:    'jnr.mccarty@yahoo.com'
+                 }, {
+                   position: 'Road Captain',
+                   fname:    'Virgi',
+                   lname:    'Bondi',
+                   nickname: '"Trouble"',
+                   email:    'virgi@surewest.net'
+                 }, {
+                   position: 'Webmaster',
+                   fname:    'Collin',
+                   lname:    'Baird',
+                   nickname: '"Chaps"',
+                   email:    'cvma33.7@gmail.com'
+                 }];
             var d = $q.defer();
             d.resolve(o);
             return d.promise;

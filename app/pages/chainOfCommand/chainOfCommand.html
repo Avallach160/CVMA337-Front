@@ -12,10 +12,21 @@
     <tbody>
     <tr data-ng-repeat="officer in vm.officers">
       <td>{{officer.position}}</td>
-      <td>{{officer.name}}</td>
+      <td>{{officer.fname}} {{officer.nickname}} {{officer.lname}}</td>
       <td><a data-ng-href="mailto:{{officer.email}}">{{officer.email}}</a></td>
     </tr>
     </tbody>
   </table>
+
+  <div class="row images">
+    <div class="inline-block" data-ng-repeat="officer in vm.officers">
+      <div class="thumbnail" data-ng-if="officer.imgname !== undefined">
+        <img class="img-thumbnail" alt="{{officer.lname}}" src="/images/bio/{{officer.imgname}}.png"/>
+        <div class="caption">
+          <p>{{officer.fname}} {{officer.lname}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
