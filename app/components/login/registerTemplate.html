@@ -1,0 +1,68 @@
+<h3>New Account Registration</h3>
+<form class="form-horizontal login-form" xmlns="http://www.w3.org/1999/html" novalidate name="registrationForm">
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="emailInput">Email Address:</label>
+    <div class="col-xs-6">
+      <input id="emailInput" class="form-control" type="email" data-ng-model="user.email" required name="email" auto-focus>
+      <span data-ng-if="registrationForm.email.$invalid && registrationForm.$dirty">Please enter a valid email address.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="pwInput">Password:</label>
+    <div class="col-xs-6">
+      <input id="pwInput" type="password" data-ng-model="user.password" required data-ng-minlength="8" name="password" data-ng-change="checkPwMatch()">
+      <span data-ng-if="registrationForm.password.$error.minlength && registrationForm.$dirty">Your password must be at least 8 characters long.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="confirmPwInput">Confirm Password:</label>
+    <div class="col-xs-6">
+      <input id="confirmPwInput" type="password" data-ng-model="user.passwordConfirmation" name="passwordConfirmation" data-ng-change="checkPwMatch()">
+      <span data-ng-if="user.pwMatchError">Passwords must match.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="firstName">First Name:</label>
+    <div class="col-xs-6">
+      <input id="firstName" class="form-control" type="text" data-ng-model="user.firstName" required name="firstName">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="lastName">Last Name:</label>
+    <div class="col-xs-6">
+      <input id="lastName" class="form-control" type="text" data-ng-model="user.lastName" required name="lastName">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="roadName">Road Name:</label>
+    <div class="col-xs-6">
+      <input id="roadName" class="form-control" type="text" data-ng-model="user.roadName" required name="roadName">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="motorcycle">Motorcycle:</label>
+    <div class="col-xs-6">
+      <input id="motorcycle" class="form-control" type="text" data-ng-model="user.motorcycle" required name="motorcycle">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-3 control-label" for="phoneNumber">Phone Number:</label>
+    <div class="col-xs-6">
+      <input id="phoneNumber" class="form-control" type="text" data-ng-model="user.phoneNumber" required name="phoneNumber">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-6">
+      <button type="submit" class="btn btn-success btn-cvma" data-ng-disabled="!registrationForm.$valid || user.pwMatchError" data-ng-click="register()">Submit</button>
+    </div>
+  </div>
+
+</form>

@@ -20,8 +20,8 @@
     'cvma.contact',
     'cvma.minutes',
     'intcConfigurator',
-    // 'cvma.login',
-    // 'cvma.register',
+     'cvma.login',
+     'cvma.register',
     'autoFocus',
     'cvma.config',
     'toaster'
