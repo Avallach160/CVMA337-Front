@@ -13,11 +13,15 @@
       getCurrent: getCurrent,
       forgetCurrent: forgetCurrent,
       getOfficers: getOfficers,
-      isOfficer: isOfficer
+      isOfficer: isOfficer,
+      getRanks: getRanks
     };
     return service;
 
     ////////////////
+    function forgetCurrent(){
+      localStorageService.remove(userKey);
+    }
 
     function getAll() {
       return webRequest.request(intcConfigurator.config.serviceRoot + 'user');
@@ -25,10 +29,6 @@
 
     function getCurrent(){
       return localStorageService.get(userKey);
-    }
-
-    function forgetCurrent(){
-      localStorageService.remove(userKey);
     }
 
     function getOfficers() {
@@ -100,6 +100,18 @@
       // }, function(errorResponse){
       //     toaster.pop('error', '', 'Something went wrong loading the officers.');
       // });
+    }
+
+    function getRanks(){
+      return webRequest.request(intcConfigurator.config.serviceRoot + 'rank', 'GET', null, null, true).then(function (response) {
+        var ranks = [{value: '<- Pending Approval ->', id: 0}];
+        _.forEach(response, function(rank){
+          ranks.push({value: rank.value, id: rank.id});
+        });
+        return ranks;
+      }, function (errorResponse) {
+        return errorResponse;
+      });
     }
 
     function isOfficer(){

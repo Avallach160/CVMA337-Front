@@ -11,9 +11,15 @@
     init();
 
     function init() {
+      UserService.getRanks().then(function (response) {
+        vm.ranks = response;
+      }, function (errorResponse) {
+
+      });
+
+
       UserService.getAll().then(function (response) {
         vm.users = response;
-        console.log(vm.users);
       }, function (errorResponse) {
 
       });

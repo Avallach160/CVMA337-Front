@@ -11,7 +11,7 @@
   <div class="form-group">
     <label class="col-xs-3 control-label" for="pwInput">Password:</label>
     <div class="col-xs-6">
-      <input id="pwInput" type="password" data-ng-model="user.password" required data-ng-minlength="8" name="password" data-ng-change="checkPwMatch()">
+      <input id="pwInput" type="password" data-ng-model="user.password" required data-ng-minlength="8" name="password" data-ng-change="checkPwMatch()" style="color: black;">
       <span data-ng-if="registrationForm.password.$error.minlength && registrationForm.$dirty">Your password must be at least 8 characters long.</span>
     </div>
   </div>
@@ -19,7 +19,7 @@
   <div class="form-group">
     <label class="col-xs-3 control-label" for="confirmPwInput">Confirm Password:</label>
     <div class="col-xs-6">
-      <input id="confirmPwInput" type="password" data-ng-model="user.passwordConfirmation" name="passwordConfirmation" data-ng-change="checkPwMatch()">
+      <input id="confirmPwInput" type="password" data-ng-model="user.passwordConfirmation" name="passwordConfirmation" data-ng-change="checkPwMatch()" style="color: black;">
       <span data-ng-if="user.pwMatchError">Passwords must match.</span>
     </div>
   </div>

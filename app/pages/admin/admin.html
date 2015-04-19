@@ -7,16 +7,19 @@
     <th st-sort="email">Email</th>
     <th st-sort="phoneNumber">Phone Number</th>
     <th>Position</th>
+    <th>Select Position</th>
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="user in vm.users">
+  <tr data-ng-repeat="user in vm.users">
     <td>{{user.firstName}}</td>
     <td>{{user.lastName}}</td>
     <td>{{user.roadName}}</td>
     <td><a data-ng-href="mailto:{{user.email}}">{{user.email}}</a></td>
     <td>{{user.phoneNumber}}</td>
     <td>{{user.position[0]}}</td>
+    <td><select data-ng-model="user.position[0]" data-ng-options="rank.id as rank.value for rank in vm.ranks"></select></td>
   </tr>
   </tbody>
 </table>
+

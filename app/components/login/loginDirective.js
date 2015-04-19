@@ -4,7 +4,7 @@
 	angular.module('cvma.login').directive('login', login);
 
 	/* @ngInject */
-	function login (localStorageService, UserService, $modal, $location) {
+	function login (localStorageService, UserService, $modal, $location, $route, $rootScope) {
 		var directive = {
 			templateUrl: '/components/login/login.html',
 			link: link,
@@ -24,8 +24,20 @@
         if (current !== null){
           scope.user = current.user;
           scope.loggedIn = true;
+
+          checkRoutes();
         }
 			}
+
+      function checkRoutes(){
+        UserService.isOfficer().then(function (response) {
+          $route.routes['/admin'].showOnNav = true;
+          $rootScope.$broadcast('reloadNav');
+        }, function (errorResponse) {
+          $route.routes['/admin'].showOnNav = false;
+          $rootScope.$broadcast('reloadNav');
+        });
+      }
 
       function createAccount(){
         var modalInstance = $modal.open({
@@ -59,6 +71,7 @@
             scope.loggedIn = true;
             scope.user = response;
 						localStorageService.set('stay', staySignedIn);
+            checkRoutes();
 					}, function(errorResponse){
 
 					});
@@ -69,6 +82,7 @@
 				scope.user = {};
 				scope.loggedIn = false;
 				UserService.forgetCurrent();
+        checkRoutes();
         $location.path('/');
 			}
 
