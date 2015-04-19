@@ -118,7 +118,15 @@
       var d = $q.defer();
 
       if (getCurrent() !== null) {
-        d.resolve(true);
+        getOfficers().then(function (response) {
+          if (_.some(response, {email: getCurrent().user.email})){
+            d.resolve(true);
+          } else {
+            d.reject(false);
+          }
+        }, function (errorResponse) {
+          d.reject(errorResponse);
+        });
       } else {
         d.reject(false);
       }
