@@ -1,0 +1,22 @@
+<table st-table="rowCollection" class="table table-striped">
+  <thead>
+  <tr>
+    <th st-sort="firstName">First Name</th>
+    <th st-sort="lastName">Last Name</th>
+    <th st-sort="roadName">Road Name</th>
+    <th st-sort="email">Email</th>
+    <th st-sort="phoneNumber">Phone Number</th>
+    <th>Position</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="user in vm.users">
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.roadName}}</td>
+    <td><a data-ng-href="mailto:{{user.email}}">{{user.email}}</a></td>
+    <td>{{user.phoneNumber}}</td>
+    <td>{{user.position[0]}}</td>
+  </tr>
+  </tbody>
+</table>

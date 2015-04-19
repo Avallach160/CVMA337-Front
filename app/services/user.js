@@ -12,7 +12,8 @@
       login: login,
       getCurrent: getCurrent,
       forgetCurrent: forgetCurrent,
-      getOfficers: getOfficers
+      getOfficers: getOfficers,
+      isOfficer: isOfficer
     };
     return service;
 
@@ -24,6 +25,10 @@
 
     function getCurrent(){
       return localStorageService.get(userKey);
+    }
+
+    function forgetCurrent(){
+      localStorageService.remove(userKey);
     }
 
     function getOfficers() {
@@ -97,8 +102,16 @@
       // });
     }
 
-    function forgetCurrent(){
-      localStorageService.remove(userKey);
+    function isOfficer(){
+      var d = $q.defer();
+
+      if (getCurrent() !== null) {
+        d.resolve(true);
+      } else {
+        d.reject(false);
+      }
+
+      return d.promise;
     }
 
     function login(email, password){
@@ -113,7 +126,11 @@
         localStorageService.set(userKey, response);
         d.resolve(response.user);
       }, function(errorResponse){
-        toaster.pop('error', '', 'An error has occurred attempting to contact the login servers.');
+        if (errorResponse.err === 'pending approval'){
+          toaster.pop('warning', '', 'This account is still pending approval.');
+        } else {
+          toaster.pop('error', '', 'An error has occurred attempting to contact the login servers.');
+        }
         d.reject(errorResponse);
       });
 

@@ -1,23 +1,19 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('cvma.main')
-        .controller('MainCtrl', MainCtrl);
+  angular
+    .module('cvma.main')
+    .controller('MainCtrl', MainCtrl);
 
-    /* @ngInject */
-    function MainCtrl(UserService) {
-        /*jshint validthis: true */
-        var vm = this;
+  /* @ngInject */
+  function MainCtrl(UserService) {
+    /*jshint validthis: true */
+    var vm = this;
 
-        init();
+    init();
 
-        function init() {
-        	// UserService.getAll().then(function(response){
-         //        // vm.users = response;
-         //    }, function(errorResponse){
-                
-         //    });
-        }
+    function init() {
+
     }
+  }
 })();

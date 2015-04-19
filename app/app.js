@@ -24,6 +24,8 @@
      'cvma.register',
     'autoFocus',
     'cvma.config',
-    'toaster'
+    'cvma.admin',
+    'toaster',
+    'smart-table'
   ]);
 })();

@@ -4,7 +4,7 @@
 	angular.module('cvma.login').directive('login', login);
 
 	/* @ngInject */
-	function login (localStorageService, UserService, $modal, $rootScope) {
+	function login (localStorageService, UserService, $modal, $location) {
 		var directive = {
 			templateUrl: '/components/login/login.html',
 			link: link,
@@ -69,11 +69,13 @@
 				scope.user = {};
 				scope.loggedIn = false;
 				UserService.forgetCurrent();
+        $location.path('/');
 			}
 
       function openSignIn() {
         signIn().then(function(response){
           if (response === 'create'){
+            scope.user = {};
             createAccount().then(function (response) {
               UserService.register(response.email, response.password, response.passwordConfirmation, response.firstName, response.lastName, response.roadName, response.motorcycle, response.phoneNumber).then(function(response){
 
