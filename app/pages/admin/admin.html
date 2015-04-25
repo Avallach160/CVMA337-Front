@@ -1,25 +1,29 @@
-<table st-table="rowCollection" class="table table-striped">
-  <thead>
-  <tr>
-    <th st-sort="firstName">First Name</th>
-    <th st-sort="lastName">Last Name</th>
-    <th st-sort="roadName">Road Name</th>
-    <th st-sort="email">Email</th>
-    <th st-sort="phoneNumber">Phone Number</th>
-    <th>Position</th>
-    <th>Select Position</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr data-ng-repeat="user in vm.users">
-    <td>{{user.firstName}}</td>
-    <td>{{user.lastName}}</td>
-    <td>{{user.roadName}}</td>
-    <td><a data-ng-href="mailto:{{user.email}}">{{user.email}}</a></td>
-    <td>{{user.phoneNumber}}</td>
-    <td>{{user.position[0]}}</td>
-    <td><select data-ng-model="user.position[0]" data-ng-options="rank.id as rank.value for rank in vm.ranks"></select></td>
-  </tr>
-  </tbody>
-</table>
-
+<div class="admin-content">
+  <table st-table="vm.users">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Position</th>
+      <th>Approve / Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-ng-repeat="user in vm.users" data-ng-class="{'label-info': !user.isApproved}">
+      <td>{{user.name}}</td>
+      <td><a data-ng-href="mailto:{{user.email}}">{{user.email}}</a></td>
+      <td>{{user.phoneNumber}}</td>
+      <td>{{user.position[0]}}</td>
+      <td>
+        <button type="btn" class="btn btn-success" data-ng-click="vm.edit(user)" data-ng-if="user.isApproved" tooltip="Edit User"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button type="btn" class="btn btn-success" data-ng-click="vm.approve(user)" data-ng-if="!user.isApproved"><span class="glyphicon glyphicon-thumbs-up" tooltip="Approve User"></span></button>
+        <button type="btn" class="btn btn-danger" data-ng-click="vm.delete(user)" tooltip="Delete User"><span class="glyphicon glyphicon-trash"></span></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!--<td>-->
+  <!--<select data-ng-model="user.position[0]" data-ng-options="rank.id as rank.value for rank in vm.ranks"></select>-->
+<!--</td>-->

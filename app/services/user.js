@@ -14,17 +14,44 @@
       forgetCurrent: forgetCurrent,
       getOfficers: getOfficers,
       isOfficer: isOfficer,
-      getRanks: getRanks
+      getRanks: getRanks,
+      deleteUser: deleteUser,
+      updateUser: updateUser,
+      approveUser: approveUser
     };
     return service;
 
     ////////////////
+    function approveUser(user){
+      user.isApproved = true;
+      return updateUser(user);
+    }
+
+    function deleteUser(user){
+      return webRequest.request(intcConfigurator.config.serviceRoot + 'user/' + user.id, 'DELETE', null, null).then(function (response) {
+        toaster.pop('success', '', 'User deleted');
+      }, function (errorResponse) {
+        toaster.pop('error', '', 'Error deleting user');
+      });
+    }
+
     function forgetCurrent(){
       localStorageService.remove(userKey);
     }
 
     function getAll() {
-      return webRequest.request(intcConfigurator.config.serviceRoot + 'user');
+      return webRequest.request(intcConfigurator.config.serviceRoot + 'user').then(function (response) {
+        _.forEach(response, function(r){
+          r.name = r.firstName;
+          if (r.roadName !== undefined){
+            r.name += ' "' + r.roadName + '" ';
+          }
+          r.name += r.lastName;
+        });
+        return response;
+      }, function (errorResponse) {
+
+      });
     }
 
     function getCurrent(){
@@ -143,6 +170,7 @@
       var d = $q.defer();
 
       webRequest.request(intcConfigurator.config.serviceRoot + 'auth/authenticate', 'POST', data).then(function(response){
+        console.log(response);
         localStorageService.set(userKey, response);
         d.resolve(response.user);
       }, function(errorResponse){
@@ -181,6 +209,14 @@
       });
 
       return d.promise;
+    }
+
+    function updateUser(user){
+      return webRequest.request(intcConfigurator.config.serviceRoot + 'user/' + user.id, 'PUT', user, null).then(function (response) {
+        toaster.pop('success', '', 'User updated.');
+      }, function (errorResponse) {
+        toaster.pop('error', '', 'Error updating the user.');
+      });
     }
   }
 })();

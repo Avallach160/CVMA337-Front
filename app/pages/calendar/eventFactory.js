@@ -81,6 +81,12 @@
         location: 'C & E Auburn V-Twin, 12015 Shale Ridge Road, Auburn, CA 95602, United States',
         description: 'http://www.auburnvtwin.com/eventslist.htm?groupId=35962&itemId=226484'
       },{
+        start: new Date(2015, 4, 3, 10),
+        end: new Date(2015, 4, 3, 16),
+        title: 'Motorcycle Awareness Rendezvous',
+        location: 'Washington Square Park, 10th & E st Marysville',
+        description: 'Public invite. Free BBQ, music, games vendors, raffle, 50/50 and free M/C parking.'
+      },{
         start: new Date(2015, 4, 15, 17),
         end: new Date(2015, 4, 15, 23),
         title: 'State / Regional Rally',
@@ -98,6 +104,18 @@
         title: 'State / Regional Rally',
         location: 'VFW 8990 Kruitof Way Fair Oaks',
         description: '2015 State and regional rally. Ride around the capital for those left in town.'
+      },{
+        start: new Date(2015, 4, 23, 9),
+        end: new Date(2015, 4, 23, 17),
+        title: 'Veteran\'s Stand Down Poker Run',
+        location: 'Coming soon',
+        description: ''
+      },{
+        start: new Date(2015, 4, 30, 10),
+        end: new Date(2015, 4, 30, 14),
+        title: 'Veterans Appreciation Motorcycle Show',
+        location: 'VFW Post 4095, 4956 Powerline Rd Olivehurst, CA',
+        description: 'Registration begins at 0930/ $10 per bike.'
       },{
         start: new Date(2015, 5, 19, 18),
         end: new Date(2015, 5, 19, 22),

@@ -1,5 +1,5 @@
 (function () {
   'use strict';
 
-  angular.module('cvma.admin', []);
+  angular.module('cvma.admin', ['ui.bootstrap']);
 })();
