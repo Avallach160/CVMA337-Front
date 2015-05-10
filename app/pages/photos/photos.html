@@ -1,2 +1,8 @@
 <h3>Photos</h3>
-<div>Under construction</div>
+<div infinite-scroll="vm.nextPage()" infinite-scroll-distance="1" infinite-scroll-disabled="vm.loadingImages">
+  <div class="inline-block" data-ng-repeat="image in vm.images">
+    <div class="thumbnail">
+      <a data-ng-href="{{image.url}}" target="_blank"><img class="img-thumbnail" alt="{{image.name}}" data-ng-src="{{image.url}}"/></a>
+    </div>
+  </div>
+</div>

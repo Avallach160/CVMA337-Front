@@ -12,5 +12,5 @@
       HOST: 'localhost:9000'
       //serviceRoot: 'http://localhost:1337/'
     });
-  };
+  }
 })();

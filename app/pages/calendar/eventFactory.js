@@ -87,6 +87,12 @@
         location: 'Washington Square Park, 10th & E st Marysville',
         description: 'Public invite. Free BBQ, music, games vendors, raffle, 50/50 and free M/C parking.'
       },{
+        start: new Date(2015, 4, 3, 9),
+        end: new Date(2015, 4, 3, 16),
+        title: '33-2 Fun Run',
+        location: 'Stockton to Valley Springs to Bones Roadhouse 4430 Pleasant Valley Rd Placerville',
+        description: 'FUN RUN Sunday May 3, 2015 requested by STAN KROMFOLS 33-2 member.(approved by 33-2 BOD) Leave the Chevron Station (4344 E Waterloo Rd, Stockton) at 9:00 Group arrives at the Chevron in Valley Springs at 9:40 - where I\'ll join the group and probably others from this area. Depart the Chevron at 10:00 The ride up Hwy 26 through Glencoe and West Point is a great motorcycle road, and I\'d propose a butt break in Pioneer when we join Hwy 88 to let everyone catch up, etc. Depart Pioneer and continue up Hwy 88 to the Mormon Emigrant Trail. Take that down past Sly Park to Plesant Valley, and the Bones Roadhouse. We would arrive at the Bones Roadhouse around 12:30. (I would suggest we call them with estimated number group ahead of time (530) 644-4301 ). I\'d plan on 1 1/2 hrs for lunch with a large group. They have both indoor and outdoor eating areas and as the name implies, it is biker friendly. Leave Bones at 2:00 and head down County E-16 to Plymouth. This is another great motorcycle road. Another butt break at the Shell station in Plymouth (15 min), then head for Ione. My guess that some would split off towards Sacto when we leave Plymouth, and some would split towards Jackson. NOTE: Riders coming thru the Stockton area on this ride: Breakfast at Perkos: 0800.. Others who don\'t want to have breakfast at Perkos: Stage 0845 hrs at the Chevron Station adjacent to Perkos off of hwy 88/99 KSU 0900 hrs en-route to Valley Springs Chevron to meet up with Stan Kromfols and other riders. Map Link: http://mapq.st/1J1LaxR Arrive 0940 Chevron station 7 Nove Way Valley Springs. KSU en-route to Bones Roadhouse .4430 Pleasant Valley Rd, Placerville Ca. Note: Stan will become the R/C from that point escorting us to Bones Roadhouse. He will also call the roadhouse to make reservations for our riders. Arrive 1230 hrs Bones Roadhouse .. Approximately 1 1/2 hours for lunch due to size of group.. Map link: http://mapq.st/1J1LFbj Depart en-route towards Plymouth on County Rd E-16, then towards Ione area where riders will choose best route to head back home. skromfols@hotmail.com'
+      },{
         start: new Date(2015, 4, 15, 17),
         end: new Date(2015, 4, 15, 23),
         title: 'State / Regional Rally',
@@ -117,11 +123,23 @@
         location: 'VFW Post 4095, 4956 Powerline Rd Olivehurst, CA',
         description: 'Registration begins at 0930/ $10 per bike.'
       },{
+        start: new Date(2015, 5, 14, 11),
+        end: new Date(2015, 5, 14, 18),
+        title: '4th Annual CVMA Northern California Family Day BBQ at Raptor\'s Home in Volcano',
+        location: '11988 State Highway 88, Jackson, CA 95642 KSU 1100',
+        description: 'This is the 4th Annual CVMA Northern California Family Day BBQ open to all CVMA Members and their families. St. Louis BBQ Ribs, BBQ Chicken, some beer, sodas and water, or bring your own favorite cold drink. Crunch and his wife Karen will be serving two side dishes; potato and macaroni salad. In order to prepare enough BBQ and side dishes it really helps to know who and how many are coming. I really don’t want anyone leaving my home not having been served. It is a good ride and I have plenty of parking for all bikes, cars, and trucks. Please RSVP by replying to this email if you will be attending and with the number of family members you will be bringing with you by June 8th. My email is: jdhmsizemore@yahoo.com. Crunch will meet everyone at the parking lot between Strings and Perkos “11988 State Highway 88, Jackson, CA 95642” at 11:00 hours. He will then escort everyone to my home in Volcano at 11:30. Meetup locations prior to Jackson will be posted before June 14th. Some cellphone and GPS devices do not work in this area and will put you off on the wrong path and when I say path I mean path; one lane dirt and rock paths that go nowhere. Please meet Crunch at the Strings and Perkos parking lot.  '
+      },{
         start: new Date(2015, 5, 19, 18),
         end: new Date(2015, 5, 19, 22),
         title: 'George "Sandman" Sannadan\'s college graduation',
         location: 'Memorial Auditorium 1515 J St. Sac 95814',
         description: ''
+      },{
+        start: new Date(2015, 5, 20, 13),
+        end: new Date(2015, 5, 20, 15),
+        title: 'June Chapter Meeting',
+        location: 'VFW Post 1934. 1251 Oregon St Redding, CA 96001',
+        description: 'Ride info coming soon'
       },{
         start: new Date(2015, 9, 17, 9),
         end: new Date(2015, 9, 17, 17),

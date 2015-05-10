@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('cvma.photos', []);
+    angular.module('cvma.photos', ['infinite-scroll']);
 })();
