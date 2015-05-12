@@ -173,6 +173,19 @@ h1, h2, h3 {
   }
 }
 
+.photos-content {
+  .thumbnail {
+    background-color: #000000;
+    border: 1px solid transparent;
+    padding: 2px;
+
+    img {
+      height: 144px;
+      width: 146px;
+    }
+  }
+}
+
 ////----- is everything below junk?
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

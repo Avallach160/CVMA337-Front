@@ -11,6 +11,7 @@
     vm.loadingImages = false;
     vm.imageIndex = 0;
     vm.images = [];
+    vm.firstLoad = true;
 
     init();
 
@@ -26,7 +27,7 @@
       if (checkMax()){
         return;
       }
-      for(var i = 0; i < 5; i++){
+      for(var i = 0; i < (vm.firstLoad ? 24 : 8); i++){
         if (checkMax()){
           return;
         }
@@ -37,6 +38,7 @@
         vm.images.push({name: img, url: intcConfigurator.config.serviceRoot + 'public/images/' + img});
       }
       vm.loadingImages = false;
+      vm.firstLoad = false;
     }
   }
 })();
